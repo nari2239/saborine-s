@@ -1,0 +1,25 @@
+body {
+  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+  background-image: url(https://cdn.pixabay.com/photo/2016/11/22/23/49/bright-1851267_1280.jpg);
+  background-size: cover;
+}
+
+.main-wrapper {
+  /* background-image: url(https://cdn.pixabay.com/photo/2016/11/22/23/49/bright-1851267_1280.jpg);
+  background-size: cover; */
+  /* height: calc(100vh - 110px); */
+  height: calc(100vh - 110px);
+}
+
+.main-wrapper p {
+  padding-top: 140px;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 210px;
+  opacity: 0.9;
+}
+
+fadein_text,
+.fadein_text span {
+  opacity: 0;
+}

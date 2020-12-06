@@ -6,7 +6,7 @@
     <div class="form-header">
       <h1 class="form-header-text">Sign Up</h1>
     </div>
-    <%= form_with model: @user, url: user_registration_path, class: "form-group-wrapper", local; true do |f| %>
+    <%= form_with model: @user, url: user_registration_path, class: "form-group-wrapper", local: true do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
        <div class="form-group">

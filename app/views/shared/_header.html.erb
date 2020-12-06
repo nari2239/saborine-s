@@ -1,14 +1,16 @@
 <header>
   <div class="navbar-inner">
     <div class="heading">
-      <h1 class="navbar-left">Saborine</h1>
+      <%= link_to 'Saborine', root_path, class: "navbar-left" %>
     </div>
     <div class="navbar">
       <ul class="navbar-right">
-        <li><a href="#" class="user-nav">新規登録</a></li>
-        <li><a href="#" class="user-nav">ログイン</a></li>
-        <li><a href="#" class="user-nav">ログアウト</a></li>
+        <li><%= link_to '新規登録', "#", class: "user-nav" %></li>
+        <li><%= link_to 'ログイン', "#", class: "user-nav" %></li>
+        <li><%= link_to 'ログアウト', "#", class: "user-nav" %></li>
       </ul>
     </div>     
   </div>
 </header>
+
+

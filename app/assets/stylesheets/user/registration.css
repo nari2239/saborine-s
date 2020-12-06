@@ -1,0 +1,73 @@
+.signup-main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-wrapper {
+  height: calc(100vh - 110px);
+  width: 50%;
+  background-color: lightgray;
+  opacity: 0.8;
+}
+
+.form-header {
+  height: 120px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+.form-header-text {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 70px;
+  padding-top: 20px;
+}
+
+.form-group-wrapper {
+  margin-top: 25px;
+}
+
+.form-group {
+  height: 120px;
+  width: 50%;
+  margin: 0 auto 20px;
+  padding: 20px 10px 0;
+  background-color: #888888;
+  border: 1px solid #888888;
+  border-radius: 5px;
+}
+
+.form-text-wrapper {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.input-place {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px 16px 8px;
+  border-radius: 5px;
+  height: 50px;
+  border: 2px solid lightblue;
+  font-size: 18px;
+}
+
+.register-btn-wrapper {
+  height: 80px;
+  width: 50%;
+  margin: 0 auto 20px;
+  padding: 15px 10px 15px;
+  background-color: #888888;
+  border: 1px solid #888888;
+  border-radius: 5px;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 10px 16px 8px;
+  border-radius: 5px;
+  height: 50px;
+  border: 2px solid lightblue;
+  font-size: 18px;
+  background-color: #FFFFCC;
+}

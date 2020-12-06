@@ -1,0 +1,11 @@
+footer {
+  background-color: rebeccapurple;
+  /* background-color: #330066; */
+  height: 40px;
+  opacity: 0.9;
+}
+
+.copy-right {
+  text-align: center;
+  padding-top: 15px;
+}

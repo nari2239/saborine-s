@@ -16,6 +16,13 @@
   margin-top: 95px;
 }
 
+.login-flash-message {
+  text-align: center;
+  color: red;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
 .signin-form-group {
   height: 120px;
   width: 50%;

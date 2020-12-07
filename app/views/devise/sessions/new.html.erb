@@ -7,7 +7,6 @@
     </div>
     <%= form_with model: @user, url: user_session_path, class: "signin-form-group-wrapper", local:true do |f| %>
       <div class='login-flash-message'>
-        <%= flash[:notice] %>
         <%= flash[:alert] %>
       </div>
       <div class="signin-form-group">

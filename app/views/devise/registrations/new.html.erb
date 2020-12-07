@@ -1,0 +1,52 @@
+<%# セカンドヘッダーをここに入れる %>
+<%= render "shared/second_header" %>
+
+<div class="main-wrapper signup-main-wrapper">
+  <div class="signup-wrapper">
+    <div class="form-header">
+      <h1 class="form-header-text">Sign Up</h1>
+    </div>
+    <%= form_with model: @user, url: user_registration_path, class: "form-group-wrapper", local: true do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+       <div class="form-group">
+         <div class="form-text-wrapper">
+           <label>Nickname</label>
+         </div>
+         <%= f.text_field :nickname, class:"input-place", placeholder:"※必須  e.g. Taro, 太郎" %>
+       </div>
+
+      <div class="form-group">
+        <div class="form-text-wrapper">
+           <label>Email Address</label>
+        </div>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input-place", placeholder:"※必須  example@example" %>
+      </div>
+
+      <div class="form-group">
+        <div class="form-text-wrapper">
+          <label>Password</label>
+        </div>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", class:"input-place", placeholder:"※必須  6文字以上で半角英数字混合" %>
+      </div>
+
+      <div class="form-group">
+        <div class="form-text-wrapper">
+          <label>Password Confirmation</label>
+        </div>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"input-place", placeholder:"※必須" %>
+      </div>
+
+      <div class="register-btn-wrapper">
+        <%= f.submit "Sign Up", class:"register-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%# <%= render "devise/shared/links" %> 
+
+<%= render "shared/second_footer" %>

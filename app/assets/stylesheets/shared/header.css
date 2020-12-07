@@ -46,8 +46,13 @@ a {
   align-items: center;
   font-weight: bold;
   font-size: 17px;
+  padding-left: 200px;
 }
 
 .user-nav {
   padding: 26px 70px;
+}
+
+.logout-btn {
+  margin-left: 250px;
 }

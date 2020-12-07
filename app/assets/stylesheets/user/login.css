@@ -1,0 +1,54 @@
+.signin-main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.login-wrapper {
+  height: calc(100vh - 110px);
+  width: 50%;
+  background-color: lightgray;
+  opacity: 0.8;
+  overflow: scroll;
+  /* 検証ツールなどで画面が狭まった時にスコロールで表示できる様にする */
+}
+
+.signin-form-group-wrapper {
+  margin-top: 95px;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.signin-form-group {
+  height: 120px;
+  width: 50%;
+  margin: 0 auto 45px;
+  padding: 20px 10px 0;
+  background-color: #888888;
+  border: 1px solid #888888;
+  border-radius: 5px;
+}
+
+.login-btn-wrapper {
+  height: 80px;
+  width: 50%;
+  margin: 0 auto 20px;
+  padding: 15px 10px 15px;
+  background-color: #888888;
+  border: 1px solid #888888;
+  border-radius: 5px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px 16px 8px;
+  border-radius: 5px;
+  height: 50px;
+  border: 2px solid lightblue;
+  font-size: 18px;
+  background-color: #FFFFCC;
+}

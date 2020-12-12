@@ -1,6 +1,90 @@
 <%= render 'shared/header' %>
 
 <div class="main-wrapper">
+  <div class="graph-space">
+  </div>
+
+  <div class="card-space">
+    <%# <% @tweets.each_slice(3) do |tweet1,tweet2,tweet3| %> 
+      <%# <div class="array-space"> %>
+      
+        <%# <% if tweet1 != nil %>
+          <%# <div class="card">
+            <div class="skip-time-space">
+              <label class="question-rabel">どのくらいサボった？</label>
+              <div class="skip-time">#{○○}分</div>
+            </div>
+            <div class="text-space">
+              <label class="question-rabel">何してた？</label>
+              <div class="what-skip">
+                  <%= tweet1.content %>
+              <%# </div>
+              <label class="question-rabel">何すべきだった？</label>
+              <div class="to-do">いいい</div>
+            </div>
+            <div class="update-btns">
+              <%= link_to root_path, method: :get, class:"edit-link" do %>
+                <%# <i class="far fa-edit fa-2x"></i>
+              <% end %>
+              <%# <%= link_to root_path, method: :get, class:"delete-link" do %>
+                <%# <i class="far fa-trash-alt fa-2x"></i> %>
+              <%# <% end %> 
+            <%# </div>  %>
+          <%# </div> %> 
+        <%# <% end %> 
+  
+        <%# <% if tweet2 != nil %> 
+          <%# <div class="card"> %>
+            <%# <div class="skip-time-space">
+              <label class="question-rabel">どのくらいサボった？</label>
+              <div class="skip-time">#{○○}分</div>
+            </div> %>
+            <%# <div class="text-space">
+              <label class="question-rabel">何してた？</label>
+              <div class="what-skip">
+                  <%= tweet2.content %>
+              <%# </div> 
+              <label class="question-rabel">何すべきだった？</label>
+              <div class="to-do">いいい</div>
+            </div> %>
+            <%# <div class="update-btns">
+              <%= link_to root_path, method: :get, class:"edit-link" do %>
+                <%# <i class="far fa-edit fa-2x"></i> %>
+              <%# <% end %>  
+              <%# <%= link_to root_path, method: :get, class:"delete-link" do %>
+                <%# <i class="far fa-trash-alt fa-2x"></i>
+              <% end %> 
+            <%# </div> %>
+          <%# </div> %>
+        <%# <% end %>  
+
+        <%# <% if tweet3 != nil %>
+          <%# <div class="card">
+            <div class="skip-time-space">
+              <label class="question-rabel">どのくらいサボった？</label>
+              <div class="skip-time">#{○○}分</div>
+            </div>
+            <div class="text-space">
+              <label class="question-rabel">何してた？</label>
+              <div class="what-skip">
+                  <%= tweet3.content %>
+              <%# </div>
+              <label class="question-rabel">何すべきだった？</label>
+              <div class="to-do">いいい</div>
+            </div> %>
+            <%# <div class="update-btns">
+              <%= link_to root_path, method: :get, class:"edit-link" do %>
+                <%# <i class="far fa-edit fa-2x"></i> %> 
+              <%# <% end %>  
+              <%# <%= link_to root_path, method: :get, class:"delete-link" do %>
+                <%# <i class="far fa-trash-alt fa-2x"></i> %> 
+              <%# <% end %> 
+            <%# </div> %>
+          <%# </div> %>
+        <%# <% end %> 
+
+      <%# </div> %>
+  </div>
 </div>
 
 <%= render 'shared/footer' %>

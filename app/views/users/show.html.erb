@@ -87,4 +87,42 @@
   </div>
 </div>
 
+<div class="new-record-btn">
+  <span class="fa-stack fa-2x">
+    <i class="fas fa-circle fa-stack-2x" style="color: #FF3399;"></i>
+    <i class="fas fa-plus fa-stack-1x" style="color: white;"></i>
+  </span>
+</div>
+
+<%# モーダル部分 後ほど切り分ける %>
+<%# <div class="new-record-modal-wrapper" id="new-record-modal">
+  <div class="modal">
+    <div id="new-record-form">
+      <div class="modal-title">記録追加</div> %>
+        <%# <%= form_with url:  tweets_path, method: :post, id: "form", local: true do |f| %> 
+          <%# <% if @tweet.errors.any? %>
+            <%# <div class="error-alert"> %>
+              <%# <ul> %>
+                <%# <% @tweet.errors.full_messages.each do |message| %> 
+                  <%# <li class='error-message'><%= message</li>  %>
+                <%# <% end %> 
+              <%# </ul> %>
+            <%# </div> %>
+          <%# <% end %> 
+          <%# <div class="modal-input-wrapper"> %>
+            <%# <%= f.number_field :hoge, placeholder: "どのくらいサボった？ 半角数字で記入 (分単位)", class: "modal-input-space" %>
+            <%# <%= f.text_area :content, placeholder: "何してた？", class: "modal-input-space", onsubmit: "return chkHissu(this)" %>
+            <%# <%= f.text_area :hoge, placeholder: "何すべきだった？", class: "modal-input-space" %>
+          <%# </div> %>
+          <%# <div class="save-cancel-btns"> %>
+            <%# <div class="cancel-btn">CANCEL</div> %>
+            <%# <input class="modal-submit" type="submit" value="SAVE"> %>
+            <%# <%= f.submit 'SAVE', id: "submit", class: "modal-submit" %>
+          <%# </div> %>
+        <%# <% end %>
+    <%# </div> %>
+  <%# </div> %>
+<%# </div> %>
+<%# モーダル部分 %>
+
 <%= render 'shared/footer' %>

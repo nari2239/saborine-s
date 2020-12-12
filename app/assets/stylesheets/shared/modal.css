@@ -1,0 +1,71 @@
+/* モーダル部分 */
+.new-record-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  /* background-color: #e6ecf0; */
+  background-color: #FFEBCD;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 450px;
+  height: auto;
+  text-align: center;
+}
+
+#new-record-form {
+  width: 100%;
+}
+
+.modal-title {
+  color: #5f5d60;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.modal-input-space {
+  width: 400px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  padding: 12px 12px;
+  border: 1px solid #FFCCFF;
+  border-radius: 5px;
+  resize: none;
+}
+
+.save-cancel-btns {
+  height: 50px;
+  padding-top: 20px;
+}
+
+.cancel-btn {
+  display: inline;
+  font-size: 20px;
+  color: #BBBBBB;
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin-right: 20px;
+  padding: 0 4px;
+  cursor: default;
+}
+
+.modal-submit {
+  font-size: 20px;
+  display: inline-block;
+  /* padding-left: 10px; */
+  border: none;
+  background-color: aliceblue;
+  border-radius: 5px;
+  color: #FF6666;
+}
+/* 以上モーダル部分 */

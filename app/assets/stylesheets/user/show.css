@@ -89,3 +89,14 @@
 
 
 /* 以上カード */
+
+/* ボタン */
+
+.new-record-btn {
+  position: fixed;
+  bottom: 40px; 
+  right: 0px;
+  padding: 6px 40px;
+}
+
+/* 以上ボタン */

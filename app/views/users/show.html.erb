@@ -5,11 +5,11 @@
   </div>
 
   <div class="card-space">
-    <%# <% @tweets.each_slice(3) do |tweet1,tweet2,tweet3| %> 
-      <%# <div class="array-space"> %>
+    <% @records.each_slice(3) do |record1,record2,record3| %>
+      <div class="array-space">
       
-        <%# <% if tweet1 != nil %>
-          <%# <div class="card">
+        <% if tweet1 != nil %>
+          <div class="card">
             <div class="skip-time-space">
               <label class="question-rabel">どのくらいサボった？</label>
               <div class="skip-time">#{○○}分</div>
@@ -17,49 +17,24 @@
             <div class="text-space">
               <label class="question-rabel">何してた？</label>
               <div class="what-skip">
-                  <%= tweet1.content %>
-              <%# </div>
+                  <%= record1.content %>
+              </div>
               <label class="question-rabel">何すべきだった？</label>
               <div class="to-do">いいい</div>
             </div>
             <div class="update-btns">
               <%= link_to root_path, method: :get, class:"edit-link" do %>
-                <%# <i class="far fa-edit fa-2x"></i>
+                <i class="far fa-edit fa-2x"></i>
               <% end %>
-              <%# <%= link_to root_path, method: :get, class:"delete-link" do %>
-                <%# <i class="far fa-trash-alt fa-2x"></i> %>
-              <%# <% end %> 
-            <%# </div>  %>
-          <%# </div> %> 
-        <%# <% end %> 
+              <%= link_to root_path, method: :get, class:"delete-link" do %>
+                <i class="far fa-trash-alt fa-2x"></i>
+              <% end %>
+            </div> 
+          </div> 
+        <% end %>
   
-        <%# <% if tweet2 != nil %> 
-          <%# <div class="card"> %>
-            <%# <div class="skip-time-space">
-              <label class="question-rabel">どのくらいサボった？</label>
-              <div class="skip-time">#{○○}分</div>
-            </div> %>
-            <%# <div class="text-space">
-              <label class="question-rabel">何してた？</label>
-              <div class="what-skip">
-                  <%= tweet2.content %>
-              <%# </div> 
-              <label class="question-rabel">何すべきだった？</label>
-              <div class="to-do">いいい</div>
-            </div> %>
-            <%# <div class="update-btns">
-              <%= link_to root_path, method: :get, class:"edit-link" do %>
-                <%# <i class="far fa-edit fa-2x"></i> %>
-              <%# <% end %>  
-              <%# <%= link_to root_path, method: :get, class:"delete-link" do %>
-                <%# <i class="far fa-trash-alt fa-2x"></i>
-              <% end %> 
-            <%# </div> %>
-          <%# </div> %>
-        <%# <% end %>  
-
-        <%# <% if tweet3 != nil %>
-          <%# <div class="card">
+        <% if record2 != nil %> 
+          <div class="card">
             <div class="skip-time-space">
               <label class="question-rabel">どのくらいサボった？</label>
               <div class="skip-time">#{○○}分</div>
@@ -67,62 +42,92 @@
             <div class="text-space">
               <label class="question-rabel">何してた？</label>
               <div class="what-skip">
-                  <%= tweet3.content %>
-              <%# </div>
+                  <%= record2.content %>
+              </div> 
               <label class="question-rabel">何すべきだった？</label>
               <div class="to-do">いいい</div>
-            </div> %>
-            <%# <div class="update-btns">
+            </div>
+            <div class="update-btns">
               <%= link_to root_path, method: :get, class:"edit-link" do %>
-                <%# <i class="far fa-edit fa-2x"></i> %> 
-              <%# <% end %>  
-              <%# <%= link_to root_path, method: :get, class:"delete-link" do %>
-                <%# <i class="far fa-trash-alt fa-2x"></i> %> 
-              <%# <% end %> 
-            <%# </div> %>
-          <%# </div> %>
-        <%# <% end %> 
+                <i class="far fa-edit fa-2x"></i>
+              <% end %>  
+              <%= link_to root_path, method: :get, class:"delete-link" do %>
+                <i class="far fa-trash-alt fa-2x"></i>
+              <% end %> 
+            </div>
+          </div>
+        <% end %>  
 
-      <%# </div> %>
+        <% if record3 != nil %>
+          <div class="card">
+            <div class="skip-time-space">
+              <label class="question-rabel">どのくらいサボった？</label>
+              <div class="skip-time">#{○○}分</div>
+            </div>
+            <div class="text-space">
+              <label class="question-rabel">何してた？</label>
+              <div class="what-skip">
+                  <%= record3.content %>
+              </div>
+              <label class="question-rabel">何すべきだった？</label>
+              <div class="to-do">いいい</div>
+            </div>
+            <div class="update-btns">
+              <%= link_to root_path, method: :get, class:"edit-link" do %>
+                <i class="far fa-edit fa-2x"></i> 
+              <% end %>  
+              <%= link_to root_path, method: :get, class:"delete-link" do %>
+                <i class="far fa-trash-alt fa-2x"></i> 
+              <% end %> 
+            </div>
+          </div>
+        <% end %> 
+
+      </div>
+    <% end %>
   </div>
+
 </div>
 
+
+<%# ボタン部分 %>
 <div class="new-record-btn">
   <span class="fa-stack fa-2x">
     <i class="fas fa-circle fa-stack-2x" style="color: #FF3399;"></i>
     <i class="fas fa-plus fa-stack-1x" style="color: white;"></i>
   </span>
 </div>
+<%# ボタン部分 %>
+
 
 <%# モーダル部分 後ほど切り分ける %>
-<%# <div class="new-record-modal-wrapper" id="new-record-modal">
+<div class="new-record-modal-wrapper" id="new-record-modal">
   <div class="modal">
     <div id="new-record-form">
-      <div class="modal-title">記録追加</div> %>
-        <%# <%= form_with url:  tweets_path, method: :post, id: "form", local: true do |f| %> 
-          <%# <% if @tweet.errors.any? %>
-            <%# <div class="error-alert"> %>
-              <%# <ul> %>
-                <%# <% @tweet.errors.full_messages.each do |message| %> 
-                  <%# <li class='error-message'><%= message</li>  %>
-                <%# <% end %> 
-              <%# </ul> %>
-            <%# </div> %>
-          <%# <% end %> 
-          <%# <div class="modal-input-wrapper"> %>
-            <%# <%= f.number_field :hoge, placeholder: "どのくらいサボった？ 半角数字で記入 (分単位)", class: "modal-input-space" %>
-            <%# <%= f.text_area :content, placeholder: "何してた？", class: "modal-input-space", onsubmit: "return chkHissu(this)" %>
-            <%# <%= f.text_area :hoge, placeholder: "何すべきだった？", class: "modal-input-space" %>
-          <%# </div> %>
-          <%# <div class="save-cancel-btns"> %>
-            <%# <div class="cancel-btn">CANCEL</div> %>
-            <%# <input class="modal-submit" type="submit" value="SAVE"> %>
-            <%# <%= f.submit 'SAVE', id: "submit", class: "modal-submit" %>
-          <%# </div> %>
-        <%# <% end %>
-    <%# </div> %>
-  <%# </div> %>
-<%# </div> %>
+      <div class="modal-title">記録追加</div>
+        <%= form_with url:  records_path, method: :post, id: "form", local: true do |f| %> 
+          <% if @record.errors.any? %>
+            <div class="error-alert">
+              <ul>
+                <% @record.errors.full_messages.each do |message| %> 
+                  <li class='error-message'><%= message %></li> 
+                <% end %> 
+              </ul>
+            </div>
+          <% end %> 
+          <div class="modal-input-wrapper">
+            <%= f.number_field :hoge, placeholder: "どのくらいサボった？ 半角数字で記入 (分単位)", class: "modal-input-space" %>
+            <%= f.text_area :content, placeholder: "何してた？", class: "modal-input-space", onsubmit: "return chkHissu(this)" %>
+            <%= f.text_area :hoge, placeholder: "何すべきだった？", class: "modal-input-space" %>
+          </div>
+          <div class="save-cancel-btns">
+            <div class="cancel-btn">CANCEL</div>
+            <%= f.submit 'SAVE', id: "submit", class: "modal-submit" %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
 <%# モーダル部分 %>
 
 <%= render 'shared/footer' %>

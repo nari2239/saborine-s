@@ -1,5 +1,6 @@
 class RecordsController < ApplicationController
   def index
+    @user = User.find(current_user.id)
   end
 
   def create
@@ -13,6 +14,7 @@ class RecordsController < ApplicationController
   end
 
   def edit
+    @user = User.find(current_user.id)
   end
 
   def update

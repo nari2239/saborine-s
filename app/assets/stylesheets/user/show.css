@@ -60,11 +60,13 @@
 .what-skip {
   border-bottom: 2px solid violet;
   margin: 8px 0;
+  overflow: scroll;
 }
 
 .to-do {
   border-bottom: 2px solid violet;
   margin: 8px 0;
+  overflow: scroll;
 }
 
 .update-btns {

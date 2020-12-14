@@ -10,6 +10,7 @@ require("channels")
 require('jquery')
 require("../header")
 require("../index")
+require("../new_modal")
 
 import '@fortawesome/fontawesome-free/js/all';
 

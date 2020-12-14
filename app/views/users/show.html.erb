@@ -27,7 +27,7 @@
               </div>
             </div>
             <div class="update-btns">
-              <%= link_to root_path, method: :get, class:"edit-link" do %>
+              <%= link_to edit_record_path(record1.id), method: :get, class:"edit-link" do %>
                 <i class="far fa-edit fa-2x"></i>
               <% end %>
               <%= link_to root_path, method: :get, class:"delete-link" do %>
@@ -56,9 +56,9 @@
               </div>
             </div>
             <div class="update-btns">
-              <%= link_to root_path, method: :get, class:"edit-link" do %>
+              <%= link_to edit_record_path(record2.id), method: :get, class:"edit-link" do %> 
                 <i class="far fa-edit fa-2x"></i>
-              <% end %>  
+              <% end %> 
               <%= link_to root_path, method: :get, class:"delete-link" do %>
                 <i class="far fa-trash-alt fa-2x"></i>
               <% end %> 
@@ -85,9 +85,9 @@
               </div>
             </div>
             <div class="update-btns">
-              <%= link_to root_path, method: :get, class:"edit-link" do %>
-                <i class="far fa-edit fa-2x"></i> 
-              <% end %>  
+              <%= link_to edit_record_path(record3.id), method: :get, class:"edit-link" do %>
+                <i class="far fa-edit fa-2x"></i>
+              <% end %>
               <%= link_to root_path, method: :get, class:"delete-link" do %>
                 <i class="far fa-trash-alt fa-2x"></i> 
               <% end %> 
@@ -116,7 +116,7 @@
 <div class="new-record-modal-wrapper" id="new-record-modal">
   <div class="modal">
     <div id="new-record-form">
-      <div class="modal-title">記録追加</div>
+      <div class="modal-title">記録を追加する</div>
         <%= form_with url:  records_path, method: :post, id: "form", local: true do |f| %> 
           <% if @record.errors.any? %>
             <div class="error-alert">
@@ -129,7 +129,7 @@
           <% end %> 
           <div class="modal-input-wrapper">
             <%= f.number_field :time, placeholder: "どのくらいサボった？ 半角数字で記入 (分単位)", class: "modal-input-space" %>
-            <%= f.text_area :skip, placeholder: "何してた？", class: "modal-input-space", onsubmit: "return chkHissu(this)" %>
+            <%= f.text_area :skip, placeholder: "何してた？", class: "modal-input-space" %>
             <%= f.text_area :to_do, placeholder: "何すべきだった？", class: "modal-input-space" %>
           </div>
           <div class="save-cancel-btns">

@@ -11,6 +11,7 @@ require('jquery')
 require("../header")
 require("../index")
 require("../new_modal")
+require("../modal_colorchange")
 
 import '@fortawesome/fontawesome-free/js/all';
 

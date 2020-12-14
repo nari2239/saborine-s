@@ -51,11 +51,11 @@
 .cancel-btn {
   display: inline;
   font-size: 20px;
-  color: #BBBBBB;
-  background-color: aliceblue;
+  color: #FFDDFF;
+  background-color: #666666;
   border-radius: 5px;
   margin-right: 20px;
-  padding: 0 4px;
+  padding: 2px 4px;
   cursor: default;
 }
 
@@ -64,8 +64,8 @@
   display: inline-block;
   /* padding-left: 10px; */
   border: none;
-  background-color: aliceblue;
+  background-color: #666666;
   border-radius: 5px;
-  color: #FF6666;
+  color: #FFDDFF;
 }
 /* 以上モーダル部分 */

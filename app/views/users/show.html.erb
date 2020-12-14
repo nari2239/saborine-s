@@ -8,19 +8,23 @@
     <% @records.each_slice(3) do |record1,record2,record3| %>
       <div class="array-space">
       
-        <% if tweet1 != nil %>
+        <% if record1 != nil %>
           <div class="card">
             <div class="skip-time-space">
               <label class="question-rabel">どのくらいサボった？</label>
-              <div class="skip-time">#{○○}分</div>
+              <div class="skip-time">
+                <%= "#{record1.time}分" %>
+              </div>
             </div>
             <div class="text-space">
               <label class="question-rabel">何してた？</label>
               <div class="what-skip">
-                  <%= record1.content %>
+                <%= record1.skip %>
               </div>
               <label class="question-rabel">何すべきだった？</label>
-              <div class="to-do">いいい</div>
+              <div class="to-do">
+                <%= record1.to_do %>
+              </div>
             </div>
             <div class="update-btns">
               <%= link_to root_path, method: :get, class:"edit-link" do %>
@@ -37,15 +41,19 @@
           <div class="card">
             <div class="skip-time-space">
               <label class="question-rabel">どのくらいサボった？</label>
-              <div class="skip-time">#{○○}分</div>
+              <div class="skip-time">
+                <%= "#{record2.time}分" %>
+              </div>
             </div>
             <div class="text-space">
               <label class="question-rabel">何してた？</label>
               <div class="what-skip">
-                  <%= record2.content %>
+                  <%= record2.skip %>
               </div> 
               <label class="question-rabel">何すべきだった？</label>
-              <div class="to-do">いいい</div>
+              <div class="to-do">
+                <%= record2.to_do %>
+              </div>
             </div>
             <div class="update-btns">
               <%= link_to root_path, method: :get, class:"edit-link" do %>
@@ -62,15 +70,19 @@
           <div class="card">
             <div class="skip-time-space">
               <label class="question-rabel">どのくらいサボった？</label>
-              <div class="skip-time">#{○○}分</div>
+              <div class="skip-time">
+                <%= "#{record3.time}分" %>
+              </div>
             </div>
             <div class="text-space">
               <label class="question-rabel">何してた？</label>
               <div class="what-skip">
-                  <%= record3.content %>
+                  <%= record3.skip %>
               </div>
               <label class="question-rabel">何すべきだった？</label>
-              <div class="to-do">いいい</div>
+              <div class="to-do">
+                <%= record3.to_do %>
+              </div>
             </div>
             <div class="update-btns">
               <%= link_to root_path, method: :get, class:"edit-link" do %>
@@ -116,9 +128,9 @@
             </div>
           <% end %> 
           <div class="modal-input-wrapper">
-            <%= f.number_field :hoge, placeholder: "どのくらいサボった？ 半角数字で記入 (分単位)", class: "modal-input-space" %>
-            <%= f.text_area :content, placeholder: "何してた？", class: "modal-input-space", onsubmit: "return chkHissu(this)" %>
-            <%= f.text_area :hoge, placeholder: "何すべきだった？", class: "modal-input-space" %>
+            <%= f.number_field :time, placeholder: "どのくらいサボった？ 半角数字で記入 (分単位)", class: "modal-input-space" %>
+            <%= f.text_area :skip, placeholder: "何してた？", class: "modal-input-space", onsubmit: "return chkHissu(this)" %>
+            <%= f.text_area :to_do, placeholder: "何すべきだった？", class: "modal-input-space" %>
           </div>
           <div class="save-cancel-btns">
             <div class="cancel-btn">CANCEL</div>

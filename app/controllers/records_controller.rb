@@ -12,6 +12,12 @@ class RecordsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+  end
+
   private
   def record_params
     params.permit(:time, :skip, :to_do).merge(user_id: current_user.id)

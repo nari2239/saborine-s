@@ -1,12 +1,14 @@
 .graph-space {
-  background-color: red;
+  background-color: rgba(242, 242, 242, 0.8);
+  border: 1px solid black;
+  /* 上のborderは後で消す */
   height: 500px;
   width: calc(100% - 70px);
   margin: 0 auto;
 }
 
 .card-space {
-  background-color: aqua;
+  background-color: rgba(242, 242, 242, 0.8);
   height: 1000px;
   width: calc(100% - 70px);
   margin: 0 auto;

@@ -30,7 +30,7 @@
               <%= link_to edit_record_path(record1.id), method: :get, class:"edit-link" do %>
                 <i class="far fa-edit fa-2x"></i>
               <% end %>
-              <%= link_to root_path, method: :get, class:"delete-link" do %>
+              <%= link_to record_path(record1.id), method: :delete, class:"delete-link" do %>
                 <i class="far fa-trash-alt fa-2x"></i>
               <% end %>
             </div> 
@@ -59,7 +59,7 @@
               <%= link_to edit_record_path(record2.id), method: :get, class:"edit-link" do %> 
                 <i class="far fa-edit fa-2x"></i>
               <% end %> 
-              <%= link_to root_path, method: :get, class:"delete-link" do %>
+              <%= link_to record_path(record2.id), method: :delete, class:"delete-link" do %>
                 <i class="far fa-trash-alt fa-2x"></i>
               <% end %> 
             </div>
@@ -88,7 +88,7 @@
               <%= link_to edit_record_path(record3.id), method: :get, class:"edit-link" do %>
                 <i class="far fa-edit fa-2x"></i>
               <% end %>
-              <%= link_to root_path, method: :get, class:"delete-link" do %>
+              <%= link_to record_path(record3.id), method: :delete, class:"delete-link" do %>
                 <i class="far fa-trash-alt fa-2x"></i> 
               <% end %> 
             </div>

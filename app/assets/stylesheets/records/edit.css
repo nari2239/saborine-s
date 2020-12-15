@@ -36,7 +36,7 @@
   background-color: #EAD9FF;
   padding: 20px 0 40px;
   border-radius: 10px;
-  width: 450px;
+  width: 470px;
   height: auto;
   text-align: center;
 }
@@ -44,3 +44,17 @@
 #edit-record-form {
   width: 100%;
 }
+
+/* 以下編集ページのエラーメッセージ部分 */
+.error-alert {
+  margin-bottom: 20px;
+}
+
+.edit-error-message {
+  font-size: 1.0vw;
+  list-style: inside;
+  color: red;
+  margin-bottom: 8px;
+}
+
+/* 以上編集ページのエラーメッセージ部分 */

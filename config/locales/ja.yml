@@ -3,3 +3,7 @@ ja:
    attributes:
      user:
        nickname: ニックネーム
+     record:
+       time: 「何分サボった？」の欄は
+       skip: 「何してた？」の欄は
+       to_do: 「何すべきだった？」

@@ -1,2 +1,145 @@
-<p>これはユーザー詳細ページ</p>
-<%= @user.nickname %>
+<%= render 'shared/header' %>
+
+<div class="main-wrapper">
+  <div class="graph-space">
+  </div>
+
+  <div class="card-space">
+    <% @records.each_slice(3) do |record1,record2,record3| %>
+      <div class="array-space">
+      
+        <% if record1 != nil %>
+          <div class="card">
+            <div class="skip-time-space">
+              <label class="question-rabel">どのくらいサボった？</label>
+              <div class="skip-time">
+                <%= "#{record1.time}分" %>
+              </div>
+            </div>
+            <div class="text-space">
+              <label class="question-rabel">何してた？</label>
+              <div class="what-skip">
+                <%= record1.skip %>
+              </div>
+              <label class="question-rabel">何すべきだった？</label>
+              <div class="to-do">
+                <%= record1.to_do %>
+              </div>
+            </div>
+            <div class="update-btns">
+              <%= link_to edit_record_path(record1.id), method: :get, class:"edit-link" do %>
+                <i class="far fa-edit fa-2x"></i>
+              <% end %>
+              <%= link_to record_path(record1.id), method: :delete, class:"delete-link" do %>
+                <i class="far fa-trash-alt fa-2x"></i>
+              <% end %>
+            </div> 
+          </div> 
+        <% end %>
+  
+        <% if record2 != nil %> 
+          <div class="card">
+            <div class="skip-time-space">
+              <label class="question-rabel">どのくらいサボった？</label>
+              <div class="skip-time">
+                <%= "#{record2.time}分" %>
+              </div>
+            </div>
+            <div class="text-space">
+              <label class="question-rabel">何してた？</label>
+              <div class="what-skip">
+                  <%= record2.skip %>
+              </div> 
+              <label class="question-rabel">何すべきだった？</label>
+              <div class="to-do">
+                <%= record2.to_do %>
+              </div>
+            </div>
+            <div class="update-btns">
+              <%= link_to edit_record_path(record2.id), method: :get, class:"edit-link" do %> 
+                <i class="far fa-edit fa-2x"></i>
+              <% end %> 
+              <%= link_to record_path(record2.id), method: :delete, class:"delete-link" do %>
+                <i class="far fa-trash-alt fa-2x"></i>
+              <% end %> 
+            </div>
+          </div>
+        <% end %>  
+
+        <% if record3 != nil %>
+          <div class="card">
+            <div class="skip-time-space">
+              <label class="question-rabel">どのくらいサボった？</label>
+              <div class="skip-time">
+                <%= "#{record3.time}分" %>
+              </div>
+            </div>
+            <div class="text-space">
+              <label class="question-rabel">何してた？</label>
+              <div class="what-skip">
+                  <%= record3.skip %>
+              </div>
+              <label class="question-rabel">何すべきだった？</label>
+              <div class="to-do">
+                <%= record3.to_do %>
+              </div>
+            </div>
+            <div class="update-btns">
+              <%= link_to edit_record_path(record3.id), method: :get, class:"edit-link" do %>
+                <i class="far fa-edit fa-2x"></i>
+              <% end %>
+              <%= link_to record_path(record3.id), method: :delete, class:"delete-link" do %>
+                <i class="far fa-trash-alt fa-2x"></i> 
+              <% end %> 
+            </div>
+          </div>
+        <% end %> 
+
+      </div>
+    <% end %>
+  </div>
+
+</div>
+
+
+<%# ボタン部分 %>
+<div class="new-record-btn">
+  <span class="fa-stack fa-2x">
+    <i class="fas fa-circle fa-stack-2x" style="color: #FF3399;"></i>
+    <i class="fas fa-plus fa-stack-1x" style="color: white;"></i>
+  </span>
+</div>
+<%# ボタン部分 %>
+
+
+<%# モーダル部分 後ほど切り分ける %>
+<div class="new-record-modal-wrapper" id="new-record-modal">
+  <div class="modal">
+    <div id="new-record-form">
+      <div class="modal-title">記録を追加する</div>
+        <%= form_with url:  records_path, method: :post, id: "form", local: true do |f| %> 
+          <% if @record.errors.any? %>
+            <div class="error-alert">
+              <ul>
+                <% @record.errors.full_messages.each do |message| %> 
+                  <li class='error-message'><%= message %></li> 
+                <% end %> 
+              </ul>
+            </div>
+          <% end %> 
+          <div class="modal-input-wrapper">
+            <%= f.number_field :time, placeholder: "※必須 何分サボった？ 半角数字で記入(0分以上1440分以下)", class: "modal-input-space" %>
+            <%= f.text_area :skip, placeholder: "何してた？ 1000文字以内", class: "modal-input-space" %>
+            <%= f.text_area :to_do, placeholder: "何すべきだった？ 1000文字以内", class: "modal-input-space" %>
+          </div>
+          <div class="save-cancel-btns">
+            <div class="cancel-btn colorchange">CANCEL</div>
+            <%= f.submit 'SAVE', id: "submit", class: "modal-submit colorchange" %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+<%# モーダル部分 %>
+
+<%= render 'shared/footer' %>

@@ -14,11 +14,12 @@
 
 ## recordsテーブル
 
-| Column | Type    | Options     |
-| ------ | ------- | ----------- |
-| time   | integer | null: false |
-| skip   | string  | null: false |
-| to_do  | string  |             |
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| time   | integer    | null: false                    |
+| skip   | string     | null: false                    |
+| to_do  | string     |                                |
+| user   | references | null: false, foreign_key: true |
 
 ### Associations
 

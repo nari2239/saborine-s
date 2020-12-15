@@ -1,0 +1,60 @@
+.edit-main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-wrapper {
+  height: calc(100vh - 110px);
+  width: 50%;
+  background-color: rgba(242, 242, 242, 0.8);
+  overflow: scroll;
+  /* 検証ツールなどで画面が狭まった時にスコロールで表示できる様にする */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-record-modal-wrapper {
+  /* position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  /* z-index: 100; */
+  /* display: none; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-modal {
+  /* position: absolute;
+  top: 20%;
+  left: 34%; */
+  /* background-color: #e6ecf0; */
+  background-color: #EAD9FF;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 470px;
+  height: auto;
+  text-align: center;
+}
+
+#edit-record-form {
+  width: 100%;
+}
+
+/* 以下編集ページのエラーメッセージ部分 */
+.error-alert {
+  margin-bottom: 20px;
+}
+
+.edit-error-message {
+  font-size: 1.0vw;
+  list-style: inside;
+  color: red;
+  margin-bottom: 8px;
+}
+
+/* 以上編集ページのエラーメッセージ部分 */

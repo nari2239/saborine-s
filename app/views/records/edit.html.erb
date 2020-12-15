@@ -1,0 +1,37 @@
+<%= render 'shared/header' %>
+
+<div class="main-wrapper">
+  <div class="edit-main-wrapper">
+    <div class="edit-wrapper">
+      <div class="edit-record-modal-wrapper">
+        <div class="edit-modal">
+          <div id="edit-record-form">
+            <div class="modal-title">記録を変更する</div>
+              <%= form_with model: @record, local: true do |f| %> 
+                <% if @record.errors.any? %>
+                  <div class="error-alert">
+                    <ul>
+                      <% @record.errors.full_messages.each do |message| %> 
+                        <li class='edit-error-message'><%= message %></li> 
+                      <% end %> 
+                    </ul>
+                  </div>
+                <% end %> 
+                <div class="modal-input-wrapper">
+                  <%= f.number_field :time, placeholder: "※必須 何分サボった？ 半角数字で記入(0分以上1440分以下)", class: "modal-input-space" %>
+                  <%= f.text_area :skip, placeholder: "何してた？ 1000文字以内", class: "modal-input-space" %>
+                  <%= f.text_area :to_do, placeholder: "何すべきだった？ 1000文字以内", class: "modal-input-space" %>
+                </div>
+                <div class="save-cancel-btns">
+                  <%= f.submit 'UPDATE', id: "submit", class: "modal-submit colorchange" %>
+                  <!-- ここに削除アイコンを入れる -->
+                </div>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

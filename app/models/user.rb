@@ -8,4 +8,5 @@ class User < ApplicationRecord
   # validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'is invalid. Include both letters and numbers' }
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'が不正な値です。英字と数字の両方を含めてください。' }
 
+  has_many :records
 end

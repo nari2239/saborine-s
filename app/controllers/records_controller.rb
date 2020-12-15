@@ -15,6 +15,7 @@ class RecordsController < ApplicationController
 
   def edit
     @user = User.find(current_user.id)
+    @record = Record.find(params[:id])
   end
 
   def update

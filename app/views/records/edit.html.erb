@@ -7,25 +7,17 @@
         <div class="edit-modal">
           <div id="edit-record-form">
             <div class="modal-title">記録を変更する</div>
-              <!-- <%= form_with url:  records_path, method: :post, id: "form", local: true do |f| %> -->
-              <form action="#"></form> 
+              <%= form_with model: @record, local: true do |f| %> 
                 <div class="modal-input-wrapper">
-                  <!-- <%= f.number_field :time, placeholder: "どのくらいサボった？ 半角数字で記入 (分単位)", class: "modal-input-space" %> -->
-                  <input type="number" placeholder="どのくらいサボった？ 半角数字で記入 (分単位)" class="modal-input-space">
-                  <!-- <%= f.text_area :skip, placeholder: "何してた？", class: "modal-input-space" %> -->
-                  <textarea class="modal-input-space" placeholder="何してた？"></textarea>
-                  <!-- <%= f.text_area :to_do, placeholder: "何すべきだった？", class: "modal-input-space" %> -->
-                  <textarea class="modal-input-space" placeholder="何すべきだった？"></textarea>
+                  <%= f.number_field :time, placeholder: "どのくらいサボった？ 半角数字で記入 (分単位)", class: "modal-input-space" %>
+                  <%= f.text_area :skip, placeholder: "何してた？", class: "modal-input-space" %>
+                  <%= f.text_area :to_do, placeholder: "何すべきだった？", class: "modal-input-space" %>
                 </div>
                 <div class="save-cancel-btns">
-                  <!-- <div class="cancel-btn colorchange">CANCEL</div> -->
-                  <!-- <%= f.submit 'SAVE', id: "submit", class: "modal-submit colorchange" %> -->
-                  <input type="submit" class="modal-submit colorchange" value="UPDATE">
-
+                  <%= f.submit 'UPDATE', id: "submit", class: "modal-submit colorchange" %>
                   <!-- ここに削除アイコンを入れる -->
-
                 </div>
-              <!-- <% end %> -->
+              <% end %>
           </div>
         </div>
       </div>

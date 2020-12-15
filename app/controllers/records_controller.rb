@@ -28,6 +28,16 @@ class RecordsController < ApplicationController
     end
   end
 
+  def destroy
+    @record = Record.find(params[:id])
+    if current_user.id == @record.user_id
+      @record.destroy
+      redirect_to user_path(current_user)
+    else
+      redirect_to 
+    end
+  end
+
   private
   def record_params
     params.require(:record).permit(:time, :skip, :to_do).merge(user_id: current_user.id)

@@ -12,6 +12,8 @@ require("../header")
 require("../index")
 require("../new_modal")
 require("../modal_colorchange")
+require("chartkick")
+require("chart.js") 
 
 import '@fortawesome/fontawesome-free/js/all';
 

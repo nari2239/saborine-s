@@ -10,4 +10,4 @@ function colorChange () {
   });
 }
 
-window.addEventListener('load', colorChange);
+setInterval(colorChange, 1000);

@@ -141,7 +141,8 @@
             </div>
           <% end %> 
           <div class="modal-input-wrapper">
-            <%= f.number_field :time, placeholder: "※必須 何分サボった？ 半角数字で記入(0分以上1440分以下)", class: "modal-input-space" %>
+            <%# input type="date" class="date-input" required %>
+            <%= f.number_field :time, placeholder: "※必須 何分サボった？ 半角数字で記入(0分以上1440分以下)", class: "modal-input-space", required: true %>
             <%= f.text_area :skip, placeholder: "何してた？ 1000文字以内", class: "modal-input-space" %>
             <%= f.text_area :to_do, placeholder: "何すべきだった？ 1000文字以内", class: "modal-input-space" %>
           </div>

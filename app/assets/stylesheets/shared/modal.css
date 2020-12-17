@@ -33,6 +33,16 @@
   margin-bottom: 40px;
 }
 
+/* カラムを追加したら外すーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+/* .date-input {
+  margin-bottom: 20px;
+  font-size: 14px;
+  padding: 12px 12px;
+  border: 1px solid #FFCCFF;
+  border-radius: 5px;
+} */
+/* カラムを追加したら外すーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
 .modal-input-space {
   width: 420px;
   margin-bottom: 20px;

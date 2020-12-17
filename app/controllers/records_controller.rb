@@ -3,7 +3,6 @@ class RecordsController < ApplicationController
   end
 
   def create
-    # binding.pry
     # @record = Record.new(time: params[:time], skip: params[:skip], to_do: params[:to_do], user_id: current_user.id)
     @record= Record.new(time: params[:time], skip: params[:skip], to_do: params[:to_do], user_id: current_user.id)
     if @record.valid?

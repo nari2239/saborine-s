@@ -16,6 +16,7 @@
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
+| date   | date       | null: false                    |
 | time   | integer    | null: false                    |
 | skip   | string     | null: false                    |
 | to_do  | string     |                                |

@@ -2,7 +2,7 @@
 
 <div class="main-wrapper">
   <div class="graph-space">
-    <%= column_chart @records.limit(7).pluck('created_at', 'time'), colors: ["purple"], width: "1500px", height: "480px" %>
+    <%= column_chart @records.limit(7).pluck('created_at', 'time'), colors: ["purple"], width: "1500px", height: "480px", xtitle: "日付", ytitle: "合計(分)" %>
   </div>
 
   <div class="card-space">

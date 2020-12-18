@@ -12,8 +12,8 @@
         <% if record1 != nil %>
           <div class="card">
             <div class="date-wrapper">
-              <div class="selected-date">選択した日付が入る</div>
-              <div class="last-updated-date">最終更新日: 2020/1/1</div>
+              <div class="selected-date"><%= record1.date.strftime("%Y年%m月%d日(%a)") %></div>
+              <div class="last-updated-date">最終更新日時:<%= record1.updated_at.to_s(:datetime_jp) %></div>
             </div>
             <div class="skip-time-space">
               <label class="question-rabel">どのくらいサボった？</label>
@@ -45,8 +45,8 @@
         <% if record2 != nil %> 
           <div class="card">
             <div class="date-wrapper">
-              <div class="selected-date">選択した日付が入る</div>
-              <div class="last-updated-date">最終更新日: 2020/1/1</div>
+              <div class="selected-date"><%= record2.date.strftime("%Y年%m月%d日(%a)") %></div>
+              <div class="last-updated-date">最終更新日時:<%= record2.updated_at.to_s(:datetime_jp) %></div>
             </div>
             <div class="skip-time-space">
               <label class="question-rabel">どのくらいサボった？</label>
@@ -78,8 +78,8 @@
         <% if record3 != nil %>
           <div class="card">
             <div class="date-wrapper">
-              <div class="selected-date">選択した日付が入る</div>
-              <div class="last-updated-date">最終更新日: 2020/1/1</div>
+              <div class="selected-date"><%= record3.date.strftime("%Y年%m月%d日(%a)") %></div>
+              <div class="last-updated-date">最終更新日時:<%= record3.updated_at.to_s(:datetime_jp) %></div>
             </div>
             <div class="skip-time-space">
               <label class="question-rabel">どのくらいサボった？</label>

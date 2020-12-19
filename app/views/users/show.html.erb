@@ -7,7 +7,6 @@
   <%= render 'shared/card', { records: @records } %>
 </div>
 
-
 <%# ボタン部分 %>
 <div class="new-record-btn">
   <span class="fa-stack fa-2x">
@@ -17,36 +16,6 @@
 </div>
 <%# ボタン部分 %>
 
-
-<%# モーダル部分 後ほど切り分ける %>
-<div class="new-record-modal-wrapper" id="new-record-modal">
-  <div class="modal">
-    <div id="new-record-form">
-      <div class="modal-title">記録を追加する</div>
-        <%= form_with url:  records_path, method: :post, id: "form", local: true do |f| %> 
-          <% if @record.errors.any? %>
-            <div class="error-alert">
-              <ul>
-                <% @record.errors.full_messages.each do |message| %> 
-                  <li class='error-message'><%= message %></li> 
-                <% end %> 
-              </ul>
-            </div>
-          <% end %> 
-          <div class="modal-input-wrapper">
-            <%= f.date_field :date, class: "date-input", required: true, value: Time.now.strftime("%Y-%m-%d")%>
-            <%= f.number_field :time, placeholder: "※必須 何分サボった？ 半角数字で記入(0分以上1440分以下)", class: "modal-input-space", required: true %>
-            <%= f.text_area :skip, placeholder: "何してた？ 1000文字以内", class: "modal-input-space", maxlength:"1000" %>
-            <%= f.text_area :to_do, placeholder: "何すべきだった？ 1000文字以内", class: "modal-input-space", maxlength:"1000" %>
-          </div>
-          <div class="save-cancel-btns">
-            <div class="cancel-btn colorchange">CANCEL</div>
-            <%= f.submit 'SAVE', id: "submit", class: "modal-submit colorchange" %>
-          </div>
-        <% end %>
-    </div>
-  </div>
-</div>
-<%# モーダル部分 %>
+<%= render 'shared/modal', { record: @record } %>
 
 <%= render 'shared/footer' %>

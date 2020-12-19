@@ -1,4 +1,5 @@
 class RecordsController < ApplicationController
+  before_action :set_record, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
   before_action :move_to_self_show, except: [:index]
 
@@ -17,12 +18,10 @@ class RecordsController < ApplicationController
 
   def edit
     @user = User.find(current_user.id)
-    @record = Record.find(params[:id])
   end
 
   def update
     @user = User.find(current_user.id)
-    @record = Record.find(params[:id])
     if @record.update(record_params)
       redirect_to user_path(@user)
     else
@@ -31,7 +30,6 @@ class RecordsController < ApplicationController
   end
 
   def destroy
-    @record = Record.find(params[:id])
     if current_user.id == @record.user_id
       @record.destroy
       redirect_to user_path(current_user)
@@ -46,9 +44,12 @@ class RecordsController < ApplicationController
   end
 
   def move_to_self_show
-    @record = Record.find(params[:id])
     if current_user.id != @record.user_id
       redirect_to user_path(current_user.id)
     end
+  end
+
+  def set_record
+    @record = Record.find(params[:id])
   end
 end

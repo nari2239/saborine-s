@@ -9,7 +9,6 @@ class RecordsController < ApplicationController
   end
 
   def create
-    # @record = Record.new(time: params[:time], skip: params[:skip], to_do: params[:to_do], user_id: current_user.id)
     @record= Record.new(date: params[:date], time: params[:time], skip: params[:skip], to_do: params[:to_do], user_id: current_user.id)
     if @record.valid?
       @record.save

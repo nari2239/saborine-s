@@ -19,8 +19,8 @@
                 <% end %> 
                 <div class="modal-input-wrapper">
                   <%= f.number_field :time, placeholder: "※必須 何分サボった？ 半角数字で記入(0分以上1440分以下)", class: "modal-input-space" %>
-                  <%= f.text_area :skip, placeholder: "何してた？ 1000文字以内", class: "modal-input-space" %>
-                  <%= f.text_area :to_do, placeholder: "何すべきだった？ 1000文字以内", class: "modal-input-space" %>
+                  <%= f.text_area :skip, placeholder: "何してた？ 1000文字以内", class: "modal-input-space", maxlength:"1000" %>
+                  <%= f.text_area :to_do, placeholder: "何すべきだった？ 1000文字以内", class: "modal-input-space", maxlength:"1000" %>
                 </div>
                 <div class="save-cancel-btns">
                   <%= f.submit 'UPDATE', id: "submit", class: "modal-submit colorchange" %>

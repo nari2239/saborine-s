@@ -1,0 +1,109 @@
+<div class="card-space">
+  <% records.each_slice(3) do |record1,record2,record3| %>
+    <div class="array-space">
+
+      <% if record1 != nil %>
+        <div class="card">
+          <div class="date-wrapper">
+            <% time1 = record1.date %>
+            <div class="selected-date"><%= record1.date.strftime("%Y/%m/%d(#{@wd[time1.wday]})") %></div>
+            <div class="last-updated-date">最終更新日時:<%= record1.updated_at.to_s(:datetime_jp) %></div>
+          </div>
+          <div class="skip-time-space">
+            <label class="question-rabel">どのくらいサボった？</label>
+            <div class="skip-time">
+              <%= "#{record1.time}分" %>
+            </div>
+          </div>
+          <div class="text-space">
+            <label class="question-rabel">何してた？</label>
+            <div class="what-skip">
+              <%= record1.skip %>
+            </div>
+            <label class="question-rabel">何すべきだった？</label>
+            <div class="to-do">
+              <%= record1.to_do %>
+            </div>
+          </div>
+          <div class="update-btns">
+            <%= link_to edit_record_path(record1.id), method: :get, class:"edit-link" do %>
+              <i class="far fa-edit fa-2x"></i>
+            <% end %>
+            <%= link_to record_path(record1.id), method: :delete, class:"delete-link" do %>
+              <i class="far fa-trash-alt fa-2x"></i>
+            <% end %>
+          </div> 
+        </div> 
+      <% end %>
+
+      <% if record2 != nil %> 
+        <div class="card">
+          <div class="date-wrapper">
+            <% time2 = record2.date %>
+            <div class="selected-date"><%= record2.date.strftime("%Y/%m/%d(#{@wd[time2.wday]})") %></div>
+            <div class="last-updated-date">最終更新日時:<%= record2.updated_at.to_s(:datetime_jp) %></div>
+          </div>
+          <div class="skip-time-space">
+            <label class="question-rabel">どのくらいサボった？</label>
+            <div class="skip-time">
+              <%= "#{record2.time}分" %>
+            </div>
+          </div>
+          <div class="text-space">
+            <label class="question-rabel">何してた？</label>
+            <div class="what-skip">
+                <%= record2.skip %>
+            </div> 
+            <label class="question-rabel">何すべきだった？</label>
+            <div class="to-do">
+              <%= record2.to_do %>
+            </div>
+          </div>
+          <div class="update-btns">
+            <%= link_to edit_record_path(record2.id), method: :get, class:"edit-link" do %> 
+              <i class="far fa-edit fa-2x"></i>
+            <% end %> 
+            <%= link_to record_path(record2.id), method: :delete, class:"delete-link" do %>
+              <i class="far fa-trash-alt fa-2x"></i>
+            <% end %> 
+          </div>
+        </div>
+      <% end %>
+
+      <% if record3 != nil %>
+        <div class="card">
+          <div class="date-wrapper">
+            <% time3 = record3.date %>
+            <div class="selected-date"><%= record3.date.strftime("%Y/%m/%d(#{@wd[time3.wday]})") %></div>
+            <div class="last-updated-date">最終更新日時:<%= record3.updated_at.to_s(:datetime_jp) %></div>
+          </div>
+          <div class="skip-time-space">
+            <label class="question-rabel">どのくらいサボった？</label>
+            <div class="skip-time">
+              <%= "#{record3.time}分" %>
+            </div>
+          </div>
+          <div class="text-space">
+            <label class="question-rabel">何してた？</label>
+            <div class="what-skip">
+                <%= record3.skip %>
+            </div>
+            <label class="question-rabel">何すべきだった？</label>
+            <div class="to-do">
+              <%= record3.to_do %>
+            </div>
+          </div>
+          <div class="update-btns">
+            <%= link_to edit_record_path(record3.id), method: :get, class:"edit-link" do %>
+              <i class="far fa-edit fa-2x"></i>
+            <% end %>
+            <%= link_to record_path(record3.id), method: :delete, class:"delete-link" do %>
+              <i class="far fa-trash-alt fa-2x"></i> 
+            <% end %> 
+          </div>
+        </div>
+      <% end %> 
+
+    </div>
+  <% end %>
+</div>

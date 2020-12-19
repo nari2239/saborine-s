@@ -33,7 +33,7 @@ class RecordsController < ApplicationController
       @record.destroy
       redirect_to user_path(current_user)
     else
-      redirect_to 
+      redirect_to user_path(current_user)
     end
   end
 

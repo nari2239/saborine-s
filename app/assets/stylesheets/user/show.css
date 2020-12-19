@@ -13,10 +13,6 @@
   align-items: center;
 }
 
-.nodata-message {
-  font-size: 60px;
-}
-
 .card-space {
   background-color: rgba(242, 242, 242, 0.8);
   height: 1000px;

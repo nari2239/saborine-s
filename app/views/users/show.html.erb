@@ -2,11 +2,7 @@
 
 <div class="main-wrapper">
   <div class="graph-space">
-    <% if @records.present? %>
       <%= column_chart @records.limit(7).group(:date).sum(:time), colors: ["purple"], width: "1500px", height: "480px", xtitle: "日付", ytitle: "合計(分)",  messages: {empty: "記録を追加するとグラフが表示されます"} %>
-    <% else %>
-      <div class="nodata-message">記録を追加するとグラフが表示されます</div>
-    <% end %>
   </div>
 
   <div class="card-space">

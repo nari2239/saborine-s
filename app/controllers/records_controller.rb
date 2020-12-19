@@ -2,7 +2,7 @@ class RecordsController < ApplicationController
   before_action :set_current_user, only: [:edit, :update]
   before_action :set_record, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
-  before_action :move_to_self_show, except: [:index]
+  before_action :move_to_self_show, except: [:index, :create]
 
 
   def index

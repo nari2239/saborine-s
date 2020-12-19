@@ -41,7 +41,7 @@
   /* margin-top: 40px; */
   /* margin-left: 30px; */
   /* margin-right: 30px; */
-  border: 2px solid yellowgreen;
+  border: 2px solid #C299FF	;
   border-radius: 5px;
 }
 
@@ -67,7 +67,7 @@
 
 .skip-time {
   margin-top: 8px;
-  border-bottom: 2px solid violet;
+  border-bottom: 2px solid #C299FF	;
   width: 85px;
 }
 
@@ -76,13 +76,13 @@
 }
 
 .what-skip {
-  border-bottom: 2px solid violet;
+  border-bottom: 2px solid #C299FF	;
   margin: 8px 0;
   overflow: scroll;
 }
 
 .to-do {
-  border-bottom: 2px solid violet;
+  border-bottom: 2px solid #C299FF	;
   margin: 8px 0;
   overflow: scroll;
 }
@@ -98,12 +98,12 @@
 .edit-link {
   width: 300px;
   margin-right: 20px;
-  color: red;
+  color: #C299FF	;
 }
 
 .delete-link {
   margin-right: 20px;
-  color: red;
+  color: #C299FF	;
 }
 
 

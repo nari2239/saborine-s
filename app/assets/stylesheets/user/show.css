@@ -119,4 +119,8 @@
   padding: 6px 40px;
 }
 
+.fa-stack:hover {
+  opacity: 0.9;
+}
+
 /* 以上ボタン */

@@ -1,5 +1,6 @@
 class RecordsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+  before_action :move_to_self_show, except: [:index]
 
 
   def index
@@ -42,5 +43,12 @@ class RecordsController < ApplicationController
   private
   def record_params
     params.require(:record).permit(:time, :skip, :to_do).merge(user_id: current_user.id)
+  end
+
+  def move_to_self_show
+    @record = Record.find(params[:id])
+    if current_user.id != @record.user_id
+      redirect_to user_path(current_user.id)
+    end
   end
 end

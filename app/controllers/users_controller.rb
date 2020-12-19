@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @records = @user.records.order("date DESC")
     @record = Record.new
+    @wd = ["日", "月", "火", "水", "木", "金", "土"]
   end
 
   

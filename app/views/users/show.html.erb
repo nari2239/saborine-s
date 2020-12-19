@@ -12,7 +12,8 @@
         <% if record1 != nil %>
           <div class="card">
             <div class="date-wrapper">
-              <div class="selected-date"><%= record1.date.strftime("%Y年%m月%d日(%a)") %></div>
+              <% time1 = record1.date %>
+              <div class="selected-date"><%= record1.date.strftime("%Y/%m/%d(#{@wd[time1.wday]})") %></div>
               <div class="last-updated-date">最終更新日時:<%= record1.updated_at.to_s(:datetime_jp) %></div>
             </div>
             <div class="skip-time-space">
@@ -45,7 +46,8 @@
         <% if record2 != nil %> 
           <div class="card">
             <div class="date-wrapper">
-              <div class="selected-date"><%= record2.date.strftime("%Y年%m月%d日(%a)") %></div>
+              <% time2 = record2.date %>
+              <div class="selected-date"><%= record2.date.strftime("%Y/%m/%d(#{@wd[time2.wday]})") %></div>
               <div class="last-updated-date">最終更新日時:<%= record2.updated_at.to_s(:datetime_jp) %></div>
             </div>
             <div class="skip-time-space">
@@ -78,7 +80,8 @@
         <% if record3 != nil %>
           <div class="card">
             <div class="date-wrapper">
-              <div class="selected-date"><%= record3.date.strftime("%Y年%m月%d日(%a)") %></div>
+              <% time3 = record3.date %>
+              <div class="selected-date"><%= record3.date.strftime("%Y/%m/%d(#{@wd[time3.wday]})") %></div>
               <div class="last-updated-date">最終更新日時:<%= record3.updated_at.to_s(:datetime_jp) %></div>
             </div>
             <div class="skip-time-space">

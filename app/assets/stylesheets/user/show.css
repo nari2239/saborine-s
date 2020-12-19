@@ -1,6 +1,6 @@
 .graph-space {
   background-color: rgba(242, 242, 242, 0.8);
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   /* 上のborderは後で消す */
   height: 500px;
   width: calc(100% - 70px);

@@ -39,7 +39,7 @@ class RecordsController < ApplicationController
   
   private
   def record_params
-    params.require(:record).permit(:time, :skip, :to_do).merge(user_id: current_user.id)
+    params.require(:record).permit(:date, :time, :skip, :to_do).merge(user_id: current_user.id)
   end
 
   def move_to_self_show

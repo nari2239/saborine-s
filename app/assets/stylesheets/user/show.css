@@ -5,7 +5,7 @@
   height: 500px;
   width: calc(100% - 70px);
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 40px 30px 20px;
 
   /* グラフとグラフがなかった時の文字を上下左右中央に来る様にflexboxを使用 */
   display: flex;

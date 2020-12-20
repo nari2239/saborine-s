@@ -4,6 +4,7 @@ ja:
      user:
        nickname: ニックネーム
      record:
+       date: 日付
        time: 「何分サボった？」の欄は
        skip: 「何してた？」の欄は
-       to_do: 「何すべきだった？」
+       to_do: 「何をすべきだった？」

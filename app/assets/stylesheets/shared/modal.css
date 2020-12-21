@@ -27,6 +27,17 @@
   width: 100%;
 }
 
+/* flashのアラート部分 */
+.alert-wrapper {
+  width: 100%;
+  background-color: #FFC0CB;
+  color:  #5f5d60;
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+/* flashのアラート部分 */
+
 .modal-title {
   color: #5f5d60;
   letter-spacing: 1px;

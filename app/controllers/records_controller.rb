@@ -13,6 +13,9 @@ class RecordsController < ApplicationController
     if @record.valid?
       @record.save
       redirect_to user_path(current_user)
+    else
+      flash.now[:alert] = '保存に成功するとマイページに移動します'
+      render template: "users/show"
     end
   end
 

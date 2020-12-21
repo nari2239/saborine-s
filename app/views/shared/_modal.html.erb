@@ -1,6 +1,7 @@
 <div class="new-record-modal-wrapper" id="new-record-modal">
   <div class="modal">
     <div id="new-record-form">
+      <div class="alert-wrapper"><%= alert %></div>
       <div class="modal-title">記録を追加する</div>
       <%= form_with url:  records_path, method: :post, id: "form", local: true do |f| %> 
         <% if record.errors.any? %>

@@ -26,6 +26,7 @@ class RecordsController < ApplicationController
     if @record.update(record_params)
       redirect_to user_path(@user)
     else
+      flash.now[:alert] = '保存に成功するとマイページに移動します'
       render :edit
     end
   end

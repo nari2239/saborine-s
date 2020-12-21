@@ -45,6 +45,17 @@
   width: 100%;
 }
 
+/* flashのアラート部分 */
+.edit-alert-wrapper {
+  width: 100%;
+  background-color: #FFFFDD;
+  color:  #5f5d60;
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+/* flashのアラート部分 */
+
 /* 以下編集ページのエラーメッセージ部分 */
 .error-alert {
   margin-bottom: 20px;

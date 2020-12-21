@@ -6,6 +6,9 @@
       <div class="edit-record-modal-wrapper">
         <div class="edit-modal">
           <div id="edit-record-form">
+            <% if flash[:alert] %>
+              <div class="edit-alert-wrapper"><%= alert %></div>
+            <% end %>
             <div class="modal-title">記録を変更する</div>
               <%= form_with model: @record, local: true do |f| %> 
                 <% if @record.errors.any? %>

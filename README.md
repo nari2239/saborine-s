@@ -3,6 +3,7 @@
 Saborine (サボリーヌ)
 
 # 概要
+![トップページ画像](https://user-images.githubusercontent.com/73570767/102858465-ad076880-446d-11eb-82b1-cac02dc3cef5.gif)
 ![メイン機能の画像](https://user-images.githubusercontent.com/73570767/102845371-c5b55580-4450-11eb-9aee-03b44da8dea1.jpg)
 
 ・今日の自身の行動を定量的に反省し、明日の行動につなげるために、サボったことを記録するアプリです。<br>

@@ -49,7 +49,17 @@
 # 要件定義
 
 # DEMO
-![Videotogif](https://user-images.githubusercontent.com/73570767/102959866-03cf7980-4524-11eb-903e-2d98b1ca23ba.gif)
+1. 新規登録ページへ遷移
+![Videotogif](https://user-images.githubusercontent.com/73570767/102961884-d638ff00-4528-11eb-941e-cff0a5e94e8b.gif)
+
+2. 必要項目を入力してSign Upボタンをクリック
+![Videotogif (1)](https://user-images.githubusercontent.com/73570767/102962554-704d7700-452a-11eb-842c-360f3f0e85ee.gif)
+
+3. 右下のボタンをクリックし、新規で記録を追加するためのモーダルを表示
+![Videotogif (2)](https://user-images.githubusercontent.com/73570767/102962946-421c6700-452b-11eb-8251-d404634814f6.gif)
+
+4. 値を入力してSAVEボタンをクリック→記録のカードが追加すれ、棒グラフにも反映される
+
 
 
 # 工夫したポイント

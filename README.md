@@ -49,6 +49,8 @@
 # 要件定義
 
 # DEMO
+![Videotogif](https://user-images.githubusercontent.com/73570767/102959866-03cf7980-4524-11eb-903e-2d98b1ca23ba.gif)
+
 
 # 工夫したポイント
 - トップページの文字にアニメーションを適用した点(初めて見る人にインパクトを与えたいため)<br>
@@ -68,6 +70,7 @@
 
 # データベース設計
 
+## ER図
 ![ER図](https://user-images.githubusercontent.com/73570767/102887086-9840ca00-4499-11eb-95a5-741a70107d36.png)
 
 ## usersテーブル

@@ -14,7 +14,6 @@
   position: absolute;
   top: 20%;
   left: 34%;
-  /* background-color: #e6ecf0; */
   background-color: #FFEBCD;
   padding: 20px 0 40px;
   border-radius: 10px;
@@ -81,7 +80,6 @@
 .modal-submit {
   font-size: 20px;
   display: inline-block;
-  /* padding-left: 10px; */
   border: none;
   background-color: #666666;
   border-radius: 5px;

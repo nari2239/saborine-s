@@ -1,11 +1,7 @@
 header {
-  /* background-color: rgba(34, 49, 52, 0.9); */
   background-color: rebeccapurple;
-  /* background-color: #330066; */
   height: 70px;
   width: 100%;
-  /* position: fixed; */
-  /* top: 0; */
   z-index: 10;
   opacity: 0.9;
 }
@@ -36,7 +32,6 @@ a {
 
 .navbar {
   width: 50%;
-  /* background-color: greenyellow; */
 }
 
 .navbar-right {

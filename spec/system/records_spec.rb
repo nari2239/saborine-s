@@ -125,3 +125,60 @@ RSpec.describe "記録編集", type: :system do
     end
   end
 end
+
+RSpec.describe '記録削除', type: :system do
+  before do
+    @record1 = FactoryBot.create(:record)
+    @record2 = FactoryBot.create(:record)
+  end
+
+  context '記録が削除できるとき' do
+    it 'ログインしたユーザーは自らが追加した記録の削除ができる' do
+      # record1を投稿したユーザーでログインする
+      visit root_path
+      expect(page).to have_content('ログイン')
+      visit new_user_session_path
+      fill_in "user_email", with: @record1.user.email
+      fill_in "user_password", with: @record1.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq user_path(@record1.user)
+      # record1に「削除」ボタンがあることを確認する
+      expect(page).to have_selector ".delete-link"
+      # 記録を削除するとレコードの数が1減ることを確認する
+      expect{
+        find('a[class="delete-link"]').click
+      }.to change { Record.count }.by(-1)
+      # ユーザー詳細ページに遷移したことを確認する
+      expect(current_path).to eq user_path(@record1.user)
+      # ユーザー詳細ページにはrecord1の内容が存在しないことを確認する（日付）
+      expect(page).to have_no_content("#{@record1.date}")
+      # ユーザー詳細ページにはrecord1の内容が存在しないことを確認する（時間）
+      expect(page).to have_no_content("#{@record1.time}")
+      # ユーザー詳細ページにはrecord1の内容が存在しないことを確認する（何をしていたか）
+      expect(page).to have_no_content("#{@record1.skip}")
+      # ユーザー詳細ページにはrecord1の内容が存在しないことを確認する（何をすべきだったか）
+      expect(page).to have_no_content("#{@record1.to_do}")
+    end
+  end
+
+  context '記録が削除できないとき' do
+    it 'ログインしたユーザーは自分以外が追加した記録の削除ができない' do
+      # record1を投稿したユーザーでログインする
+      visit root_path
+      expect(page).to have_content('ログイン')
+      visit new_user_session_path
+      fill_in "user_email", with: @record1.user.email
+      fill_in "user_password", with: @record1.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq user_path(@record1.user)
+      # record2のニックネームがユーザー詳細ページにない(ユーザー詳細ページにニックネームが表示されていないならば、record2のカードも表示されていない)
+      expect(page).to have_no_content(@record2.user.nickname)
+    end
+    it 'ログインしていないと記録を削除することができない削除' do
+      # 未ログインでrecord1のユーザー詳細ページにとんでもログインページにリダイレクトされる
+      visit root_path
+      visit user_path(@record1.user)
+      expect(current_path).to eq new_user_session_path
+    end
+  end
+end

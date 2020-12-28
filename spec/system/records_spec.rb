@@ -12,11 +12,7 @@ RSpec.describe "記録追加", type: :system do
       visit root_path
       expect(page).to have_content('ログイン')
       # ログインする
-      visit new_user_session_path
-      fill_in 'user_email', with: @user.email
-      fill_in 'user_password', with: @user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq user_path(@user)
+      sign_in(@user)
       # 記録を追加するためのモーダルを表示させるボタンがあることを確認する
       expect(page).to have_selector ".new-record-btn"
       # ボタンをクリックし、モーダルを表示させる
@@ -63,11 +59,7 @@ RSpec.describe "記録編集", type: :system do
       # 記録1を投稿したユーザーでログインする
       visit root_path
       expect(page).to have_content('ログイン')
-      visit new_user_session_path
-      fill_in "user_email", with: @record1.user.email
-      fill_in "user_password", with: @record1.user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq user_path(@record1.user)
+      sign_in(@record1.user)
       # ユーザー詳細ページ内の事前に追加した記録のカードがあることを確認する
       expect(page).to have_selector ".card"
       # 編集ページへ遷移する
@@ -109,11 +101,7 @@ RSpec.describe "記録編集", type: :system do
       # record1を追加したユーザーでログインする
       visit root_path
       expect(page).to have_content('ログイン')
-      visit new_user_session_path
-      fill_in "user_email", with: @record1.user.email
-      fill_in "user_password", with: @record1.user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq user_path(@record1.user)
+      sign_in(@record1.user)
       # record2の編集ページへ遷移しようとすると、record1を追加したユーザーの詳細ページへ戻ってくる
       visit edit_record_path(@record2)
       expect(current_path).to eq user_path(@record1.user)
@@ -137,11 +125,7 @@ RSpec.describe '記録削除', type: :system do
       # record1を投稿したユーザーでログインする
       visit root_path
       expect(page).to have_content('ログイン')
-      visit new_user_session_path
-      fill_in "user_email", with: @record1.user.email
-      fill_in "user_password", with: @record1.user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq user_path(@record1.user)
+      sign_in(@record1.user)
       # record1に「削除」ボタンがあることを確認する
       expect(page).to have_selector ".delete-link"
       # 記録を削除するとレコードの数が1減ることを確認する
@@ -166,11 +150,7 @@ RSpec.describe '記録削除', type: :system do
       # record1を投稿したユーザーでログインする
       visit root_path
       expect(page).to have_content('ログイン')
-      visit new_user_session_path
-      fill_in "user_email", with: @record1.user.email
-      fill_in "user_password", with: @record1.user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq user_path(@record1.user)
+      sign_in(@record1.user)
       # record2のニックネームがユーザー詳細ページにない(ユーザー詳細ページにニックネームが表示されていないならば、record2のカードも表示されていない)
       expect(page).to have_no_content(@record2.user.nickname)
     end

@@ -10,7 +10,7 @@
           <li><%= link_to 'ログイン', new_user_session_path, class: "user-nav" %></li>
         <% else %>
           <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nav" %></li>
-          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "user-nav logout-btn" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "user-nav" %></li>
         <% end %>
       </ul>
     </div>     

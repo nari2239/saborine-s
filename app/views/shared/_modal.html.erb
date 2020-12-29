@@ -22,8 +22,8 @@
           <%= f.text_area :to_do, placeholder: "何すべきだった？ 1000文字以内", class: "modal-input-space", maxlength:"1000", value: record.to_do %>
         </div>
         <div class="save-cancel-btns">
-          <div class="cancel-btn colorchange">CANCEL</div>
-          <%= f.submit 'SAVE', id: "submit", class: "modal-submit colorchange" %>
+          <div class="cancel-btn">CANCEL</div>
+          <%= f.submit 'SAVE', id: "submit", class: "modal-submit" %>
         </div>
       <% end %>
     </div>

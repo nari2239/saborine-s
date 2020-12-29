@@ -17,6 +17,7 @@ RSpec.describe "記録追加", type: :system do
       expect(page).to have_selector ".new-record-btn"
       # ボタンをクリックし、モーダルを表示させる
       find('div[class="new-record-btn"]').click
+      page.evaluate_script('document.getElementById("new-record-modal").style.display = "block";')
       # フォームに情報を入力する
       fill_in 'time', with: @record.time
       fill_in 'skip', with: @record.skip

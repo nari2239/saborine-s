@@ -11,7 +11,7 @@ require('jquery')
 // require("../header")
 require("../index")
 require("../new_modal")
-require("../modal_colorchange")
+// require("../modal_colorchange")
 require("chartkick")
 require("chart.js") 
 

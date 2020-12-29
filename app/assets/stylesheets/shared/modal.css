@@ -80,6 +80,10 @@
   cursor: default;
 }
 
+.cancel-btn:hover {
+  background-color: #AAAAAA;
+}
+
 .modal-submit {
   font-size: 20px;
   display: inline-block;
@@ -87,5 +91,9 @@
   background-color: #666666;
   border-radius: 5px;
   color: #FFDDFF;
+}
+
+.modal-submit:hover {
+  background-color: #AAAAAA;
 }
 /* 以上モーダル部分 */

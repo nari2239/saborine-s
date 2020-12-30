@@ -1,3 +1,4 @@
+:orange_book:
 # アプリ名
 
 　Saborine (サボリーヌ)

@@ -10,7 +10,7 @@
 
 # :orange_book: 本番環境
 
-<!-- ここにデプロイしたアプリのURLを貼る -->
+https://saborine-s.herokuapp.com/
 
 - Eメール ここに登録したユーザーのEメールを貼る<br>
 - パスワード ここに登録したユーザーのパスワードを貼る<br><br>

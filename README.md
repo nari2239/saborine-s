@@ -1,7 +1,7 @@
 # :orange_book: アプリ名
 
 　Saborine (サボリーヌ)
-<br><br>
+<br><br><br>
 
 # :orange_book: 概要
 ![メイン機能の画像](https://user-images.githubusercontent.com/73570767/102845371-c5b55580-4450-11eb-9aee-03b44da8dea1.jpg)<br>

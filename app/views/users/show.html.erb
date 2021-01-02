@@ -4,12 +4,17 @@
   <% if @records.any? %>
     <div class="search-space">
       表示を期間で絞る
-      <form action="get" class="date-search-form">
-        <input type="date">
+      <%= form_with url:  root_path, method: :get, class: "date-search-form", local: true do |f| %> 
+      <%# <form action="get" class="date-search-form"> %>
+        <%= f.date_field  :hoge, required: true %>
+        <%# <input type="date"> %>
         〜
-        <input type="date">
-        <input type="submit" value="SEARCH" class="search-button">
-      </form>
+        <%= f.date_field  :hoge, required: true %>
+        <%# <input type="date"> %>
+        <%= f.submit 'SEARCH', class: "search-button" %>
+        <%# <input type="submit" value="SEARCH" class="search-button"> %>
+      <%# </form> %>
+      <% end %>
     </div>
   <% end %>
   <% unless @record.errors.any? %>

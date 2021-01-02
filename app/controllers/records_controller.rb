@@ -41,7 +41,7 @@ class RecordsController < ApplicationController
   end
 
   def search
-    @records = Record.search(params[:start_period], params[:end_period])
+    @records = Record.search(@user, params[:start_period], params[:end_period])
     @wd = ["日", "月", "火", "水", "木", "金", "土"]
   end
   

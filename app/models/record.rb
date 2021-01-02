@@ -6,11 +6,11 @@ class Record < ApplicationRecord
 
   belongs_to :user
 
-  def self.search(start_period, end_period)
+  def self.search(user_id, start_period, end_period)
     if start_period != "" && end_period != ""
-      Record.where(date: start_period..end_period)
+      Record.where(user_id: user_id,date: start_period..end_period)
     else
-      Record.all
+      Record.where(user_id: user_id)
     end
   end
 end

@@ -25,6 +25,10 @@
   color: #FFFFCC;
 }
 
+.search-button:hover {
+  background-color: #AAAAAA;
+}
+
 /* 以上が検索欄 */
 
 .graph-space {

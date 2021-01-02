@@ -5,4 +5,12 @@ class Record < ApplicationRecord
   validates :to_do, length: { minimum: 0, maximum: 1000, message: '1000文字以内で記入してください。' }, allow_blank: true
 
   belongs_to :user
+
+  def self.search(start_period, end_period)
+    if start_period != "" && end_period != ""
+      Record.where(date: start_period..end_period)
+    else
+      Record.all
+    end
+  end
 end

@@ -1,15 +1,17 @@
 <%= render 'shared/header' %>
 
 <div class="main-wrapper">
-  <div class="search-space">
-    表示を期間で絞る
-    <form action="get" class="date-search-form">
-      <input type="date">
-      〜
-      <input type="date">
-      <input type="submit" value="SEARCH" class="search-button">
-    </form>
-  </div>
+  <% if @records.any? %>
+    <div class="search-space">
+      表示を期間で絞る
+      <form action="get" class="date-search-form">
+        <input type="date">
+        〜
+        <input type="date">
+        <input type="submit" value="SEARCH" class="search-button">
+      </form>
+    </div>
+  <% end %>
   <% unless @record.errors.any? %>
     <div class="graph-space">
         <%= column_chart @records.limit(7).group(:date).sum(:time), colors: ["purple"], width: "1500px", height: "480px", xtitle: "日付", ytitle: "合計(分)",  messages: {empty: "記録を追加するとグラフが表示されます"} %>

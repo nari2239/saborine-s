@@ -1,10 +1,11 @@
 # :orange_book: アプリ名
 
 　Saborine (サボリーヌ)
-<br><br><br>
+<br><br>
 
 # :orange_book: 概要
-![メイン機能の画像](https://user-images.githubusercontent.com/73570767/102845371-c5b55580-4450-11eb-9aee-03b44da8dea1.jpg)<br>
+![新トップページ紹介](https://user-images.githubusercontent.com/73570767/103475272-1fbdff80-4def-11eb-995f-a4efd4b1bd11.jpg)
+<br>
 
 - 今日の自身の行動を反省し、明日の行動を定量的かつ本質的に考えるために、サボったことを記録するアプリです。<br><br>
 

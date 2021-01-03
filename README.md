@@ -16,22 +16,21 @@ https://saborine-s.herokuapp.com/
 - Eメール ここに登録したユーザーのEメールを貼る<br>
 - パスワード ここに登録したユーザーのパスワードを貼る<br><br>
 
-# :orange_book: DEMO
-1. 新規登録ページへ遷移
+# :orange_book: アプリ機能
+1. ユーザー機能(新規登録・ログイン)<br><br>
+ヘッダーの「新規登録」をクリックする。(既に登録している場合は「ログイン」をクリックしてログインページへ進む。ここでは割愛する。) <br><br>
 ![Videotogif](https://user-images.githubusercontent.com/73570767/102961884-d638ff00-4528-11eb-941e-cff0a5e94e8b.gif)<br><br>
-
-2. 必要項目を入力してSign Upボタンをクリック
+必要項目を入力して「Sign Up」をクリックすると、ユーザー詳細ページに遷移する。<br><br>
 ![Videotogif (1)](https://user-images.githubusercontent.com/73570767/102962554-704d7700-452a-11eb-842c-360f3f0e85ee.gif)<br><br>
 
-3. 右下のボタンをクリックし、新規で記録を追加するためのモーダルを表示
+2. 記録の追加<br><br>
+画面右下にあるプラスボタンをクリックすると記録を追加するためのモーダルが表示される。<br><br>
 ![Videotogif (2)](https://user-images.githubusercontent.com/73570767/102962946-421c6700-452b-11eb-8251-d404634814f6.gif)<br><br>
-
-4. 値を入力してSAVEボタンをクリック→記録のカードが追加され、棒グラフにも反映される
+値を入力して「SAVE」をクリックをクリックすると、記録のカードが追加され、棒グラフにも反映される。<br><br>
 ![Videotogif (3)](https://user-images.githubusercontent.com/73570767/102963717-2ca83c80-452d-11eb-96f9-5fa48bd40754.gif)<br><br>
-
-``※バリデーションに引っかかった場合は、モーダルが再表示されます。投稿一覧ページに戻りたい場合はCANCELボタンをクリックしてモーダルをフェードアウトさせ、ヘッダーのニックネームをクリックすると戻れます。``<br><br>
- いくつか記録を追加すると以下画像の様になります
-![メイン機能の画像](https://user-images.githubusercontent.com/73570767/102845371-c5b55580-4450-11eb-9aee-03b44da8dea1.jpg)<br><br>
+``:zap:バリデーションに引っかかった場合は、モーダルが再表示される。記録一覧ページ(ユーザー詳細ページ)に戻りたい場合は、「CANCEL」をクリックしてモーダルをフェードアウトさせ、ヘッダーのニックネームをクリックすると戻れる。``<br><br>
+ いくつか記録を追加すると以下画像の様になる。<br><br>
+![新トップページ紹介](https://user-images.githubusercontent.com/73570767/103475272-1fbdff80-4def-11eb-995f-a4efd4b1bd11.jpg)<br><br>
 
 5. 各カードの編集アイコンを押すと編集ページに遷移する
 ![Videotogif (4)](https://user-images.githubusercontent.com/73570767/102964521-3af75800-452f-11eb-90cb-efb815163432.gif)<br><br>
@@ -39,7 +38,7 @@ https://saborine-s.herokuapp.com/
 6. 値を変更してUPDATEボタンをクリックする→投稿情報が変更され、変更は棒グラフにも反映される
 ![Videotogif (5)](https://user-images.githubusercontent.com/73570767/102965167-a857b880-4530-11eb-9088-bfc44baa3fcd.gif)<br><br>
 
-``※もし変更せずに投稿一覧ページに戻る場合は、ヘッダーのニックネームをクリックすると戻れます。``<br><br>
+``もし変更せずに投稿一覧ページに戻る場合は、ヘッダーのニックネームをクリックすると戻れます。``<br><br>
 
 7. 各カードのゴミ箱アイコンをクリック→投稿が削除され、投稿一覧ページと棒グラフにも変更は反映される。
 ![Videotogif (6)](https://user-images.githubusercontent.com/73570767/102965980-45ffb780-4532-11eb-9f00-c0e1df61e633.gif)<br><br>

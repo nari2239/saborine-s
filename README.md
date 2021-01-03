@@ -1,6 +1,6 @@
 # :orange_book: アプリ名
 
-　Saborine (サボリーヌ)
+　**Saborine (サボリーヌ)**
 <br><br>
 
 # :orange_book: 概要
@@ -68,6 +68,7 @@ https://saborine-s.herokuapp.com/
 以上が、概要部分で述べた「明日の行動を定量的かつ本質的に考える」という意味です。<br><br>
 
 # :orange_book: 目指した問題解決
+![ユーザーが抱える課題](https://user-images.githubusercontent.com/73570767/103485610-f2973e80-4e3a-11eb-9995-bf3f7bd77923.png)<br><br>
 
 # :orange_book: 工夫したポイント
 - トップページの文字にアニメーションを適用した点(初めて見る人にインパクトを与えたいため)<br>
@@ -85,6 +86,7 @@ https://saborine-s.herokuapp.com/
 
 # :orange_book: 今後実装したい機能
 - アプリ操作案内のモーダルを追加する ・・・SwiperJSを使用し、現在作成中
+- グラフの表示を週次・月次・年次で切り替えられる様にする
 - レスポンシブ対応
 - SPA(Single Page Application)にしたい ・・・Vue.jsを使用
 - アプリの性質上、スマホで使えるようにした方がユーザーは楽なので、ios版を作成したい

@@ -43,13 +43,15 @@ https://saborine-s.herokuapp.com/
 
 4. **記録の削除**<br><br>
 削除したい記録のカードにあるゴミ箱アイコンをクリックすると、記録が削除されます。記録の削除は棒グラフにも反映されます。<br><br>
-![Videotogif (6)](https://user-images.githubusercontent.com/73570767/102965980-45ffb780-4532-11eb-9f00-c0e1df61e633.gif)<br><br>
+![Videotogif (8)](https://user-images.githubusercontent.com/73570767/103476880-c0ff8280-4dfc-11eb-8a43-77511bfe02b3.gif)<br><br>
 
 5. **記録の検索**<br><br>
 記録一覧ページ(ユーザー詳細ページ)の「表示を期間で絞る」の横にある、日付入力欄に日付を入力することで、入力した期間内の記録のみを表示させることができます。日付を入力した後に「SEARCH」をクリックすると、入力した期間内の記録を表示したページに遷移します。<br><br>
 ![Videotogif (7)](https://user-images.githubusercontent.com/73570767/103476696-674a8880-4dfb-11eb-9e32-8910b9e84e59.gif)<br><br>
 :zap: **入力した期間内の記録を表示したページは、記録一覧ページ(ユーザー詳細ページ)に似ていますが、モーダルを表示するためのプラスボタンを配置しておりません。記録一覧ページ(ユーザー詳細ページ)に戻りたい場合は、ヘッダーのニックネームをクリックすると戻ることができます。**<br><br>
 :zap: **記録が1つもない場合、記録一覧ページ(ユーザー詳細ページ)に日付入力欄は表示されません。**<br><br>
+
+
 
 
 # :orange_book: 工夫したポイント
@@ -66,9 +68,9 @@ https://saborine-s.herokuapp.com/
 - Font Awesome (5.15.1)<br>
 - VSCode（Visual Studio Code）<br>
 
-# :orange_book: 課題や今後実装したい機能
+# :orange_book: 今後実装したい機能
+- アプリ操作案内のモーダルを追加する ・・・SwiperJSを使用し、現在作成中
 - レスポンシブ対応
-- 記録検索機能 ・・・表示させる投稿を日付で絞る。
 - SPA(Single Page Application)にしたい ・・・Vue.jsを使用
 - アプリの性質上、スマホで使えるようにした方がユーザーは楽なので、ios版を作成したい
 

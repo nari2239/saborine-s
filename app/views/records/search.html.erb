@@ -8,8 +8,8 @@
         〜
         <%= f.date_field  :end_period, required: true, value: "#{params[:end_period]}"  %>
         <%= f.submit 'SEARCH', class: "search-button" %>
+      <% end %>
     </div>
-  <% end %>
     <div class="graph-space">
         <%= column_chart @records.limit(7).group(:date).sum(:time), colors: ["purple"], width: "1500px", height: "480px", xtitle: "日付", ytitle: "合計(分)",  messages: {empty: "記録を追加するとグラフが表示されます"} %>
     </div>

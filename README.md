@@ -114,7 +114,7 @@ https://saborine-s.herokuapp.com/
 | ------ | ---------- | ------------------------------ |
 | date   | date       | null: false                    |
 | time   | integer    | null: false                    |
-| skip   | string     | null: false                    |
+| skip   | string     |                                |
 | to_do  | string     |                                |
 | user   | references | null: false, foreign_key: true |
 

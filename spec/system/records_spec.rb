@@ -163,3 +163,58 @@ RSpec.describe '記録削除', type: :system do
     end
   end
 end
+
+RSpec.describe '記録検索', type: :system do
+  before do
+    @record1 = FactoryBot.create(:record)
+    @record2 = FactoryBot.create(:record)
+  end
+
+  context '記録の検索ができるとき' do
+    it 'ログインしたユーザーは自らが追加した記録を期間をしてして検索することができる' do
+      # record1を投稿したユーザーでログインする
+      visit root_path
+      expect(page).to have_content('ログイン')
+      sign_in(@record1.user)
+      # ログインしたユーザーの詳細ページに日付を入力する欄があることを確認する
+      expect(page).to have_content('表示を期間で絞る')
+      # 日付を入力してSEARCHをクリックする
+      fill_in 'start_period', with: @record1.date
+      fill_in 'end_period', with: @record1.date
+      find('input[value="SEARCH"]').click
+      # 検索ページに遷移したことを確認する
+      expect(current_path).to eq search_records_path
+      # 検索ページにはログインしたユーザーが追加した記録があることを確認する
+      expect(page).to have_selector ".chartjs-render-monitor"
+      expect(page).to have_content(@record1.date.strftime("%Y/%m/%d"))
+      expect(page).to have_content(@record1.time)
+      expect(page).to have_content(@record1.skip)
+      expect(page).to have_content(@record1.to_do)
+    end
+  end
+
+  context '記録の検索ができないとき' do
+    it 'ログインしたユーザーは自分以外が追加した記録を検索することができない' do
+      # record1を投稿したユーザーでログインする
+      visit root_path
+      expect(page).to have_content('ログイン')
+      sign_in(@record1.user)
+      # record2の日付を入力してSEARCHをクリックする
+      fill_in 'start_period', with: @record2.date
+      fill_in 'end_period', with: @record2.date
+      find('input[value="SEARCH"]').click
+      # 検索ページに遷移したことを確認する
+      expect(current_path).to eq search_records_path
+      # 検索ページにはrecord2の記録の情報がないことを確認する(日付と時間は重なる可能性があるため除外する)
+      expect(page).to have_no_content(@record1.skip)
+      expect(page).to have_no_content(@record1.to_do)
+    end
+    it 'ログインしていないと記録を検索することができない' do
+      # トップページから検索ページへ遷移する
+      visit root_path
+      visit search_records_path
+      # ログインページへ遷移されることを確認する
+      expect(current_path).to eq new_user_session_path
+    end
+  end
+end

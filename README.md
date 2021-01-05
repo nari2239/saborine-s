@@ -11,10 +11,10 @@
 
 # :orange_book: 本番環境
 
-https://saborine-s.herokuapp.com/
+http://3.113.104.86/
 
-- Eメール sabojiro@com<br>
-- パスワード sabojiro11<br><br>
+- Eメール sabotaro@com<br>
+- パスワード sabotaro11<br><br>
 
 # :orange_book: アプリ機能
 1. **ユーザー機能(新規登録・ログイン)**<br><br>

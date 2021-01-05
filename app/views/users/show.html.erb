@@ -1,7 +1,7 @@
 <%= render 'shared/header' %>
 
 <div class="main-wrapper">
-  <% if @records.any? %>
+  <% if @records.present? %>
     <div class="search-space">
       表示を期間で絞る
       <%= form_with url:  search_records_path, method: :get, class: "date-search-form", local: true do |f| %> 

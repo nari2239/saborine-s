@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: saborine_s_production
-  username: saborine_s
-  password: <%= ENV['SABORINE_S_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock

@@ -111,9 +111,8 @@ https://saborine-s.herokuapp.com/
  を入力してログインしてください。
  ``` 
 :zap:**アクセスした時に、Webpacker::Manifest::MissingEntryError
-が出た場合は<br>
-$ rails install yarn <br>
-を実行してください**
+が出た場合は $ rails install yarn を実行してください**
+<br><br>
 
 # :orange_book: データベース設計
 

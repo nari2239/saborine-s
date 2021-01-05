@@ -74,7 +74,14 @@ https://saborine-s.herokuapp.com/
 - トップページの文字にアニメーションを適用した点(初めて見る人にインパクトを与えたいため)<br>
 - 記録の表示を1段3枚ずつのカード形式にした点(後から見返す時に見やすくするため)<br>
 - 新規投稿や投稿の編集、投稿の削除への誘導をボタンやアイコンを使った点(ユーザーに直感的な操作ができることを感じて欲しかったため)<br>
-- 棒グラフは1日単位でグループ化し、サボった時間を合計して表示した点(サボった時間を視覚的にわかりやすくするため)<br>
+- 棒グラフは1日単位でグループ化し、サボった時間を合計して表示した点(サボった時間を視覚的にわかりやすくするため)<br><br>
+
+# :orange_book: 今後実装したい機能
+- アプリ操作案内のモーダルを追加する ・・・SwiperJSを使用し、現在作成中
+- グラフの表示を週次・月次・年次で切り替えられる様にする
+- レスポンシブ対応
+- SPA(Single Page Application)にしたい ・・・Vue.jsを使用
+- アプリの性質上、スマホで使えるようにした方がユーザーは楽なので、ios版を作成したい<br><br>
 
 # :orange_book: 使用技術(開発環境)
 - Ruby (2.6.5p114)<br>
@@ -82,14 +89,31 @@ https://saborine-s.herokuapp.com/
 - Chart.js (2.9.4)<br>
 - jQuery (3.5.1)<br>
 - Font Awesome (5.15.1)<br>
-- VSCode（Visual Studio Code）<br>
+- VSCode（Visual Studio Code）<br><br>
 
-# :orange_book: 今後実装したい機能
-- アプリ操作案内のモーダルを追加する ・・・SwiperJSを使用し、現在作成中
-- グラフの表示を週次・月次・年次で切り替えられる様にする
-- レスポンシブ対応
-- SPA(Single Page Application)にしたい ・・・Vue.jsを使用
-- アプリの性質上、スマホで使えるようにした方がユーザーは楽なので、ios版を作成したい
+# :orange_book: ローカルでの使用方法
+ 1. $ cd アプリケーションを作成したいディレクトリ
+ 2. $ git clone https://github.com/nari2239/saborine-s.git
+ 3. $ cd saborine-s
+ 4. $ bundle install
+ 5. $ yarn install
+ 6. $ rails db:create<br>
+ :zap:**2回目のクローンの場合は$ rails db:create実行前に $ rails db:dropを実行してください。**
+ 7. $ rails db:migrate
+ 8. $ rails db:seed<br>
+ (ユーザーと20個の記録が初期データとして入ります。不要ならこのコマンドはスキップしても構いません。)
+ 9. $ rails s
+ 10. GoogleChromeで http://localhost:3000/ へアクセスしてください。<br>
+ ```
+ $ rails db:seedを実行した方は、ログインをクリックした後に、
+ メールアドレス: user@test.com
+ パスワード: testuser1
+ を入力してログインしてください。
+ ``` 
+:zap:**アクセスした時に、Webpacker::Manifest::MissingEntryError
+が出た場合は<br>
+$ rails install yarn <br>
+を実行してください**
 
 # :orange_book: データベース設計
 

@@ -13,8 +13,8 @@
 
 https://saborine-s.herokuapp.com/
 
-- Eメール ここに登録したユーザーのEメールを貼る<br>
-- パスワード ここに登録したユーザーのパスワードを貼る<br><br>
+- Eメール sabojiro@com<br>
+- パスワード sabojiro11<br><br>
 
 # :orange_book: アプリ機能
 1. **ユーザー機能(新規登録・ログイン)**<br><br>

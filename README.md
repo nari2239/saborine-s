@@ -147,7 +147,7 @@ http://3.113.104.86/
 
 # :orange_book: テストコードの結果
 ## 統合テスト
-![統合テスト結果](https://user-images.githubusercontent.com/73570767/103794985-c3760c80-5088-11eb-874d-28726d38325f.png)
+![統合テスト結果](https://user-images.githubusercontent.com/73570767/103796083-20be8d80-508a-11eb-9d2d-9451381d8d51.png)
 
 ## 単体テスト
 - Userモデル

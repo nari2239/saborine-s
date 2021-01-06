@@ -18,6 +18,8 @@ a {
 .heading {
   width: 50%;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-left {

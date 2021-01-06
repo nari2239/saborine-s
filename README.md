@@ -77,7 +77,6 @@ http://3.113.104.86/
 - 棒グラフは1日単位でグループ化し、サボった時間を合計して表示した点(サボった時間を視覚的にわかりやすくするため)<br><br>
 
 # :orange_book: 今後実装したい機能
-- アプリ操作案内のモーダルを追加する ・・・SwiperJSを使用し、現在作成中
 - グラフの表示を週次・月次・年次で切り替えられる様にする
 - レスポンシブ対応
 - SPA(Single Page Application)にしたい ・・・Vue.jsを使用
@@ -144,3 +143,15 @@ http://3.113.104.86/
 ### Associations
 
 - belongs_to :user
+<br><br>
+
+# :orange_book: テストコードの結果
+## 統合テスト
+![統合テスト結果](https://user-images.githubusercontent.com/73570767/103794985-c3760c80-5088-11eb-874d-28726d38325f.png)
+
+## 単体テスト
+- Userモデル
+![userモデル単体テスト結果](https://user-images.githubusercontent.com/73570767/103795189-0637e480-5089-11eb-9656-a7d6b74c8211.png)
+<br><br>
+- Recordモデル
+![recordモデル単体テスト結果](https://user-images.githubusercontent.com/73570767/103795395-44cd9f00-5089-11eb-81c5-4f24526901d5.png)

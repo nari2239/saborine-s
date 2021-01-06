@@ -28,6 +28,16 @@ a {
   font-weight: bold;
 }
 
+.about-button {
+  margin-left: 1.5vw;
+  padding-top: 0.3vh;
+  color: #FFFFCC;
+}
+
+.about-button:hover {
+  opacity: 0.7;
+}
+
 .navbar {
   width: 50%;
 }

@@ -155,7 +155,7 @@ RSpec.describe '記録削除', type: :system do
       # record2のニックネームがユーザー詳細ページにない(ユーザー詳細ページにニックネームが表示されていないならば、record2のカードも表示されていない)
       expect(page).to have_no_content(@record2.user.nickname)
     end
-    it 'ログインしていないと記録を削除することができない削除' do
+    it 'ログインしていないと記録を削除することができない' do
       # 未ログインでrecord1のユーザー詳細ページにとんでもログインページにリダイレクトされる
       visit root_path
       visit user_path(@record1.user)

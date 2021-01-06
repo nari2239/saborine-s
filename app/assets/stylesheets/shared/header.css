@@ -18,16 +18,24 @@ a {
 .heading {
   width: 50%;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-left {
   display: block;
   font-size: 2em;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   font-weight: bold;
+}
+
+.about-button {
+  margin-left: 1.5vw;
+  padding-top: 0.3vh;
+  color: #FFFFCC;
+}
+
+.about-button:hover {
+  opacity: 0.7;
 }
 
 .navbar {

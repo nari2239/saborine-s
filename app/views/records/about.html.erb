@@ -1,0 +1,35 @@
+<%= render 'shared/header' %>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><%= image_tag 'usershowpagenav.png', class: "swiper-image", alt: "ユーザー詳細ページの操作を紹介する画像" %></div>
+    <div class="swiper-slide"><%= image_tag 'recordmodal.png', class: "swiper-image", alt: "記録を追加するモーダルの操作を紹介する画像" %></div>
+    <div class="swiper-slide"><%= image_tag 'recordmodalerror.png', class: "swiper-image", alt: "記録追加時にバリデーションで弾かれた時の操作を紹介する画像" %></div>
+    <div class="swiper-slide"><%= image_tag 'editpage.png', class: "swiper-image", alt: "編集ページの操作を紹介する画像" %></div>
+    <div class="swiper-slide"><%= image_tag 'searchpage.png', class: "swiper-image", alt: "検索ページの操作を紹介する画像" %></div>
+    <div class="swiper-slide"><%= image_tag 'signedinrootpage.png', class: "swiper-image", alt:"ログインした状態でトップページに遷移してしまった時の操作を紹介する画像" %></div>
+  </div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
+<%= render 'shared/footer' %>
+
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    cssMode: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    keyboard: true,
+  });
+</script>

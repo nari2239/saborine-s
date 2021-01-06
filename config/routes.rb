@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :records, only: [:index, :create, :edit , :update, :destroy] do
     collection do
       get 'search'
+      get 'about'
     end
   end
   resources :users, only: :show

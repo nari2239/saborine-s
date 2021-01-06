@@ -1,8 +1,8 @@
 class RecordsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :about]
   before_action :set_current_user, only: [:edit, :update, :search]
   before_action :set_record, only: [:edit, :update, :destroy]
-  before_action :move_to_self_show, except: [:index, :create, :search]
+  before_action :move_to_self_show, except: [:index, :create, :search, :about]
 
 
   def index
@@ -43,6 +43,9 @@ class RecordsController < ApplicationController
   def search
     @records = Record.search(@user, params[:start_period], params[:end_period])
     @wd = ["日", "月", "火", "水", "木", "金", "土"]
+  end
+
+  def about
   end
   
   private

@@ -1,5 +1,7 @@
 .second-header {
   background-color: black;
+  display: flex;
+  align-items: center;
 }
 
 .second-navbar {

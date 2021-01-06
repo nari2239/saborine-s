@@ -218,3 +218,29 @@ RSpec.describe '記録検索', type: :system do
     end
   end
 end
+
+RSpec.describe '操作案内ページ' do
+  before do
+    @user = FactoryBot.create(:user)
+  end
+  
+  context '操作案内ページが表示される' do
+    it 'ログインしたユーザーは操作案内ページを見ることができる' do
+      # 事前に登録したユーザーでログインする
+      visit root_path
+      expect(page).to have_content('ログイン')
+      sign_in(@user)
+      # ヘッダーの？ボタンをクリックする
+      find('a[class="about-button"]').click
+      # 現在のページが操作案内ページであることを確認する
+      expect(current_path).to eq about_records_path
+    end
+    it 'ログインしていないユーザーでも操作案内ページを見ることができる' do
+      # トップページのヘッダーから？ボタンをクリックする
+      visit root_path
+      find('a[class="about-button"]').click
+      # 現在のページが操作案内ページであることを確認する
+      expect(current_path).to eq about_records_path
+    end
+  end
+end

@@ -88,6 +88,7 @@ http://3.113.104.86/
 - アプリの性質上、スマホで使えるようにした方がユーザーは楽なので、ios版を作成したい<br><br>
 
 # :orange_book: 使用技術(開発環境)
+- AWS EC2<br>
 - Ruby (2.6.5p114)<br>
 - Ruby on Rails (6.0.3.4)<br>
 - Chart.js (2.9.4)<br>

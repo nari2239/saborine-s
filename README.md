@@ -94,6 +94,7 @@ http://3.113.104.86/
 - Chart.js (2.9.4)<br>
 - jQuery (3.5.1)<br>
 - Font Awesome (5.15.1)<br>
+- Google Font API (Material Design)(現在はローカル環境のみ)<br>
 - VSCode（Visual Studio Code）<br><br>
 
 # :orange_book: ローカルでの使用方法
